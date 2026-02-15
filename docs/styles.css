@@ -122,14 +122,54 @@ h3 {
 }
 
 /* For dropdown toggles specifically */
-.navbar .dropdown-toggle {
+/* .navbar .dropdown-toggle {
   color: #1e293b !important;
 }
 
 .navbar .dropdown-toggle:hover {
   color: var(--primary) !important;
+} */
+
+.navbar-toggler {
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Optional subtle border */
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
 }
 
+.hamburger-lines {
+  display: block;
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.hamburger-lines span,
+.hamburger-lines span::before,
+.hamburger-lines span::after {
+  display: block;
+  background-color: #1e293b; /* Matches your nav-link color */
+  height: 2px;
+  width: 25px;
+  border-radius: 1px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.hamburger-lines span::before,
+.hamburger-lines span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger-lines span::before {
+  top: -8px;
+}
+
+.hamburger-lines span::after {
+  bottom: -8px;
+}
 /* Code blocks */
 pre {
   background: var(--dark);
