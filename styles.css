@@ -138,7 +138,7 @@ h3 {
 
 .hamburger-lines {
   display: block;
-  background: transparent;
+  background: #64748b;
   border: none;
   padding: 0.5rem;
   cursor: pointer;
@@ -170,6 +170,7 @@ h3 {
 .hamburger-lines span::after {
   bottom: -8px;
 }
+
 /* Code blocks */
 pre {
   background: var(--dark);
