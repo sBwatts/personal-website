@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Seth Watts, PhD</title>
+<link>https://www.sethbwatts.com/research.html</link>
+<atom:link href="https://www.sethbwatts.com/research.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.7.34</generator>
+<lastBuildDate>Mon, 19 Jan 2026 06:00:00 GMT</lastBuildDate>
+<item>
+  <title>AI in Policing: Capturing Police Performance (Good and Bad) in Routine, Rare, and Novel Events</title>
+  <dc:creator>Seth Watts, Michael D. White, Aili Malm</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/ai-in-policing-capturing-police-performance-good-and-bad-in-routine-rare-and-nov/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🔬 Preprint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a preprint that has not undergone peer review. Findings should be interpreted with caution.</p>
+</div>
+</div>
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> CrimRxiv</p>
+<p><strong>Open Access:</strong> Yes</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.21428/cb6ab371.c691ef98">DOI Link</a> | <a href="https://www.crimrxiv.com/pub/k4k0rpp1/download/pdf">PDF</a> | <a href="https://openalex.org/W7124744856">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/ai-in-policing-capturing-police-performance-good-and-bad-in-routine-rare-and-nov/</guid>
+  <pubDate>Mon, 19 Jan 2026 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Does automated feedback impact the acceptability of AI-generated police body worn camera review? An implementation science natural experiment</title>
+  <dc:creator>Seth Watts, Brandon del Pozo, Michael D. White et al.</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/does-automated-feedback-impact-the-acceptability-of-ai-generated-police-body-wor/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Journal of Experimental Criminology</p>
+<p><strong>Open Access:</strong> Yes</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.1007/s11292-025-09711-7">DOI Link</a> | <a href="https://link.springer.com/content/pdf/10.1007/s11292-025-09711-7.pdf">PDF</a> | <a href="https://openalex.org/W4416603187">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/does-automated-feedback-impact-the-acceptability-of-ai-generated-police-body-wor/</guid>
+  <pubDate>Mon, 24 Nov 2025 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Officer Acceptance and Use of AI-Driven Body-Worn Camera Footage Review</title>
+  <dc:creator>Michael D. White, Seth Watts, Aili Malm et al.</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/officer-acceptance-and-use-of-ai-driven-body-worn-camera-footage-review/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> American Journal of Criminal Justice</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.1007/s12103-025-09857-0">DOI Link</a> | <a href="https://openalex.org/W4414428454">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/officer-acceptance-and-use-of-ai-driven-body-worn-camera-footage-review/</guid>
+  <pubDate>Mon, 22 Sep 2025 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>An Evaluation of Truleo’s AI-based Body-Worn Camera Analytics</title>
+  <dc:creator>Michael D. White, Seth Watts, Aili Malm</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/an-evaluation-of-truleos-ai-based-body-worn-camera-analytics/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🔬 Preprint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a preprint that has not undergone peer review. Findings should be interpreted with caution.</p>
+</div>
+</div>
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> CrimRxiv</p>
+<p><strong>Citations:</strong> 1</p>
+<p><strong>Open Access:</strong> Yes</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.21428/cb6ab371.45f5258f">DOI Link</a> | <a href="https://www.crimrxiv.com/pub/hy6q0g5t/download/pdf">PDF</a> | <a href="https://openalex.org/W4408994445">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/an-evaluation-of-truleos-ai-based-body-worn-camera-analytics/</guid>
+  <pubDate>Mon, 31 Mar 2025 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Can De-escalation Training Reduce Use of Force and Injuries to Citizens Without Risking Officer Safety?</title>
+  <dc:creator>Carlena Orosco, Michael D. White, Seth Watts</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/can-de-escalation-training-reduce-use-of-force-and-injuries-to-citizens-without-/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Applied police briefings :</p>
+<p><strong>Open Access:</strong> Yes</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.22215/apb.v1i3.4996">DOI Link</a> | <a href="https://doi.org/10.22215/apb.v1i3.4996">PDF</a> | <a href="https://openalex.org/W4406202142">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/can-de-escalation-training-reduce-use-of-force-and-injuries-to-citizens-without-/</guid>
+  <pubDate>Mon, 06 Jan 2025 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Who is fatigued? A repeated cross-sectional survey of officer attitudes towards people who use opioids, naloxone, and their role in responding to opioid overdoses</title>
+  <dc:creator>Seth Watts, Michael D. White, Dina Perrone et al.</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/who-is-fatigued-a-repeated-cross-sectional-survey-of-officer-attitudes-towards-p/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Journal of Criminal Justice</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.1016/j.jcrimjus.2024.102308">DOI Link</a> | <a href="https://openalex.org/W4403706253">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/who-is-fatigued-a-repeated-cross-sectional-survey-of-officer-attitudes-towards-p/</guid>
+  <pubDate>Thu, 24 Oct 2024 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>More Than Use of Force: Examining Alternative Outcomes for Police De-Escalation Training</title>
+  <dc:creator>Michael D. White, Carlena Orosco, Seth Watts</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/more-than-use-of-force-examining-alternative-outcomes-for-police-de-escalation-t/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Applied police briefings :</p>
+<p><strong>Citations:</strong> 1</p>
+<p><strong>Open Access:</strong> Yes</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.22215/apb.v1i2.5010">DOI Link</a> | <a href="https://appliedpolicebriefings.com/index.php/APB/article/download/5010/3597">PDF</a> | <a href="https://openalex.org/W4404787451">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/more-than-use-of-force-examining-alternative-outcomes-for-police-de-escalation-t/</guid>
+  <pubDate>Wed, 04 Sep 2024 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Understanding Police Involvement at Opioid Overdose Incidents Through Body-Worn Camera Footage</title>
+  <dc:creator>Seth Watts, Michael D. White, Carlena Orosco et al.</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/understanding-police-involvement-at-opioid-overdose-incidents-through-body-worn-/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Applied police briefings :</p>
+<p><strong>Open Access:</strong> Yes</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.22215/apb.v1i2.5019">DOI Link</a> | <a href="https://appliedpolicebriefings.com/index.php/APB/article/download/5019/3605">PDF</a> | <a href="https://openalex.org/W4404787808">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/understanding-police-involvement-at-opioid-overdose-incidents-through-body-worn-/</guid>
+  <pubDate>Wed, 04 Sep 2024 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Automating Body-Worn Camera Footage Review through AI: Preliminary Findings from a Multi-Site Randomized Control Trial</title>
+  <dc:creator>Seth Watts, Michael D. White, Aili Malm</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/automating-body-worn-camera-footage-review-through-ai-preliminary-findings-from-/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🔬 Preprint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a preprint that has not undergone peer review. Findings should be interpreted with caution.</p>
+</div>
+</div>
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> CrimRxiv</p>
+<p><strong>Citations:</strong> 2</p>
+<p><strong>Open Access:</strong> Yes</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.21428/cb6ab371.dd9645dd">DOI Link</a> | <a href="https://www.crimrxiv.com/pub/8xm0r2jv/download/pdf">PDF</a> | <a href="https://openalex.org/W4401587180">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/automating-body-worn-camera-footage-review-through-ai-preliminary-findings-from-/</guid>
+  <pubDate>Wed, 14 Aug 2024 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Does proximity to service providers impact punitivity in stop outcomes for individuals experiencing homelessness?</title>
+  <dc:creator>Katharine L. Brown, Seth Watts, Patricia R. Turner et al.</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/does-proximity-to-service-providers-impact-punitivity-in-stop-outcomes-for-indiv/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Journal of Crime and Justice</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.1080/0735648x.2024.2375371">DOI Link</a> | <a href="https://openalex.org/W4400551519">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/does-proximity-to-service-providers-impact-punitivity-in-stop-outcomes-for-indiv/</guid>
+  <pubDate>Thu, 11 Jul 2024 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Automating body-worn camera footage review through AI: baseline attitudes from a multisite randomized control trial</title>
+  <dc:creator>Seth Watts, Michael D. White, Aili Malm</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/automating-body-worn-camera-footage-review-through-ai-baseline-attitudes-from-a-/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Policing A Journal of Policy and Practice</p>
+<p><strong>Citations:</strong> 9</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.1093/police/paae107">DOI Link</a> | <a href="https://openalex.org/W4403556701">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/automating-body-worn-camera-footage-review-through-ai-baseline-attitudes-from-a-/</guid>
+  <pubDate>Mon, 01 Jan 2024 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>A half-century investigation of police officer line-of-duty deaths: putting the recent spike in long-term context</title>
+  <dc:creator>Michael D. White, Khadija Monk, Seth Watts</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/a-half-century-investigation-of-police-officer-line-of-duty-deaths-putting-the-r/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Police Practice and Research</p>
+<p><strong>Citations:</strong> 2</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.1080/15614263.2023.2267728">DOI Link</a> | <a href="https://openalex.org/W4388734916">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/a-half-century-investigation-of-police-officer-line-of-duty-deaths-putting-the-r/</guid>
+  <pubDate>Thu, 16 Nov 2023 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Beyond force and injuries: Examining alternative (and important) outcomes for police De-escalation training</title>
+  <dc:creator>Michael D. White, Carlena Orosco, Seth Watts</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/beyond-force-and-injuries-examining-alternative-and-important-outcomes-for-polic/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Journal of Criminal Justice</p>
+<p><strong>Citations:</strong> 8</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.1016/j.jcrimjus.2023.102129">DOI Link</a> | <a href="https://openalex.org/W4388334768">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/beyond-force-and-injuries-examining-alternative-and-important-outcomes-for-polic/</guid>
+  <pubDate>Wed, 01 Nov 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Can police de-escalation training reduce use of force and citizen injury without compromising officer safety?</title>
+  <dc:creator>Michael D. White, Carlena Orosco, Seth Watts</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/can-police-de-escalation-training-reduce-use-of-force-and-citizen-injury-without/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Journal of Experimental Criminology</p>
+<p><strong>Citations:</strong> 11</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.1007/s11292-023-09584-8">DOI Link</a> | <a href="https://openalex.org/W4385765306">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/can-police-de-escalation-training-reduce-use-of-force-and-citizen-injury-without/</guid>
+  <pubDate>Fri, 11 Aug 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Leveraging Body-Worn Camera Footage to Better Understand Opioid Overdoses and the Impact of Police-Administered Naloxone</title>
+  <dc:creator>Michael D. White, Seth Watts, Carlena Orosco et al.</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/leveraging-body-worn-camera-footage-to-better-understand-opioid-overdoses-and-th/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> American Journal of Public Health</p>
+<p><strong>Citations:</strong> 24</p>
+<p><strong>Open Access:</strong> Yes</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.2105/ajph.2022.306918">DOI Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/9382158">PDF</a> | <a href="https://openalex.org/W4286322155">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/leveraging-body-worn-camera-footage-to-better-understand-opioid-overdoses-and-th/</guid>
+  <pubDate>Thu, 21 Jul 2022 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Investigating the prevalence and utility of police body-worn cameras in the George Floyd protests</title>
+  <dc:creator>Janne E. Gaub, Michael D. White, Aili Malm et al.</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/investigating-the-prevalence-and-utility-of-police-body-worn-cameras-in-the-geor/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Policing An International Journal</p>
+<p><strong>Citations:</strong> 5</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.1108/pijpsm-10-2021-0151">DOI Link</a> | <a href="https://openalex.org/W4280623538">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/investigating-the-prevalence-and-utility-of-police-body-worn-cameras-in-the-geor/</guid>
+  <pubDate>Wed, 11 May 2022 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Moving Beyond Narcan: A Police, Social Service, and Researcher Collaborative Response to the Opioid Crisis</title>
+  <dc:creator>Michael D. White, Dina Perrone, Seth Watts et al.</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/moving-beyond-narcan-a-police-social-service-and-researcher-collaborative-respon/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> American Journal of Criminal Justice</p>
+<p><strong>Citations:</strong> 29</p>
+<p><strong>Open Access:</strong> Yes</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.1007/s12103-021-09625-w">DOI Link</a> | <a href="https://link.springer.com/content/pdf/10.1007/s12103-021-09625-w.pdf">PDF</a> | <a href="https://openalex.org/W3178503590">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/moving-beyond-narcan-a-police-social-service-and-researcher-collaborative-respon/</guid>
+  <pubDate>Sat, 03 Jul 2021 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Narcan cops: Officer perceptions of opioid use and willingness to carry naloxone</title>
+  <dc:creator>Michael D. White, Dina Perrone, Aili Malm et al.</dc:creator>
+  <link>https://www.sethbwatts.com/research/articles/narcan-cops-officer-perceptions-of-opioid-use-and-willingness-to-carry-naloxone/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="publication-details" class="level2">
+<h2 class="anchored" data-anchor-id="publication-details">Publication Details</h2>
+<p><strong>Published in:</strong> Journal of Criminal Justice</p>
+<p><strong>Citations:</strong> 24</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><a href="https://doi.org/10.1016/j.jcrimjus.2020.101778">DOI Link</a> | <a href="https://openalex.org/W3119646267">OpenAlex</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.sethbwatts.com/research/articles/narcan-cops-officer-perceptions-of-opioid-use-and-willingness-to-carry-naloxone/</guid>
+  <pubDate>Fri, 01 Jan 2021 06:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
