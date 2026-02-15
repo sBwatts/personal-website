@@ -16,7 +16,6 @@ project:
 website:
   title: "Seth Watts, PhD"
   navbar:
-    background: light
     right:
       - href: index.qmd
         text: Home
