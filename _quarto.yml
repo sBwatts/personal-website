@@ -50,7 +50,6 @@ website:
 format:
   html:
     css: styles.css
-    include-in-header: "files/includes/_dark-mode-toggle.html"
     # toc: true
     footnotes-hover: true
     code-copy: true
