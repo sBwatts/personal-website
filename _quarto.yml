@@ -9,6 +9,8 @@ project:
     - Rscript call-python.R
   resources:
     - cv/cv.pdf
+    - CNAME
+    - .nojekyll
   output-dir: docs
 
 website:
