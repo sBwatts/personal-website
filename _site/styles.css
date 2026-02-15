@@ -1,0 +1,56 @@
+/* css styles */
+body {
+  background-color: #2d2c2b;
+  color: #dfddd6;
+}
+
+footer,
+footer.footer,
+#quarto-footer,
+.nav-footer {
+  background-color: #2d2c2b !important;
+  color: #dfddd6 !important;
+}
+
+footer a,
+footer.footer a,
+#quarto-footer a,
+.nav-footer a {
+  color: #dfddd6 !important;
+}
+
+.sidebar,
+#quarto-sidebar {
+  background-color: #2d2c2b;
+}
+
+.navbar {
+  background-color: #2d2c2b !important;
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #dfddd6 !important;
+}
+
+/* 1) Global icon color (Font Awesome + Bootstrap Icons) */
+i.bi, i.fa, i.fas, i.far, i.fab {
+  color: #dfddd6;
+}
+
+/* 2) Navbar icons specifically (font icons + SVG icons) */
+.navbar .nav-link i,
+.navbar .nav-link svg {
+  color: #dfddd6 !important;  /* font icons */
+  fill: #dfddd6 !important;   /* svg icons */
+  stroke: #dfddd6 !important; /* some svg sets */
+}
+
+/* 3) Hover state */
+.navbar .nav-link:hover i,
+.navbar .nav-link:hover svg {
+  color: #ffd24a !important;
+  fill: #ffd24a !important;
+  stroke: #ffd24a !important;
+}
+
+

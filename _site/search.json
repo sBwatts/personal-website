@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Seth Watts",
+    "section": "",
+    "text": "Faculty page\n  \n  \n    \n     E-mail\n  \n  \n    \n     Github\n  \n  \n    \n     LinkedIn\n  \n  \n      ORCID\n  \n  \n      Google Scholar\n  \n\n  \n  \nI am an assistant professor at Texas State University. My research centers on policing, specifically technology, innovation, and the interface between police and public health.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "website",
+    "section": "",
+    "text": "Researcher, Univerisity"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "website",
+    "section": "",
+    "text": "PhD, Univerisity"
+  },
+  {
+    "objectID": "research/articles/truleo-baseline-perceptions-2024/index.html#abstract",
+    "href": "research/articles/truleo-baseline-perceptions-2024/index.html#abstract",
+    "title": "Automating body-worn camera footage review through AI: baseline attitudes from a multisite randomized control trial",
+    "section": "Abstract",
+    "text": "Abstract\nBody-worn cameras (BWCs) have been widely adopted as a tool to promote police reform. However, studies have shown that most of the footage recorded by BWCs (about 95 per cent) is never reviewed or seen, which undercuts the core benefits of BWCs. Artificial Intelligence-driven analytics may overcome this problem. One example is Truleo, which uses natural language processing to analyse the audio footage and produce metrics of risk and professionalism. However, there is virtually no research examining its use and impact in policing. In the current study, we describe preliminary findings from ongoing randomized controlled trials testing the implementation and impact of Truleo in the Apache Junction and Casa Grande Police Departments. We draw on focus groups of officers, sergeants, and upper-level management and officer perceptions via surveys administered pre-deployment of the technology. We conclude with a discussion of policy implications related to the use of AI for BWC footage review, particularly with regard to how the technology may promote professionalism, intensify supervision, and increase organizational efficiency.\n\nVersion: Pre-print\nVersion: Post-print\nNote: The above post-print is a pre-copyedited, author-produced version of an article accepted for publication in Policing: A Journal of Policy and Practice. The version of record is available online at https://doi.org/10.1093/police/paae107.\nCitation: Watts, S., White, M. D., & Malm, A. (2024). Automating body-worn camera footage review through AI: baseline attitudes from a multisite randomized control trial. Policing: A Journal of Policy and Practice, 18, paae107."
+  },
+  {
+    "objectID": "research/articles/proximity-service-providers-2024/index.html#abstract",
+    "href": "research/articles/proximity-service-providers-2024/index.html#abstract",
+    "title": "Does Proximity to Service Providers Impact Punitivity in Stop Outcomes for Individuals Experiencing Homelessness?",
+    "section": "Abstract",
+    "text": "Abstract\nThe purpose of this study is to examine whether there is a relationship between the formality of police stop outcomes (e.g., no action v. citation) for stops involving individuals experiencing homelessness and the distance of the stop to service providers. We combine several datasets from the city of San Diego to assess our research question, including: police administrative data from the California Department of Justice, location datasets of food banks, homeless shelters, emergency medical and behavior facilities, and detox centers. Using logistic regressions, we model two outcomes – formality of a stop outcome and noncriminal transportation – with distance to within-city service providers and stop characteristics. We find that as proximity to detox facilities and food banks increases, the likelihood of formal outcomes also increases. Yet, when stops occur farther from emergency housing resources there is a reduction in the likelihood of formal outcomes. As the proximity from food banks increases there is also an increase in the likelihood of noncriminal/caretaking transport. Increasing police accessibility to service providers may reduce the use of formal justice-system outcomes in police encounters with individuals experiencing homelessness, which may also reduce the unintended consequences of entering the justice system for individuals experiencing homelessness."
+  },
+  {
+    "objectID": "research/articles/narcan-cops-2021/index.html#abstract",
+    "href": "research/articles/narcan-cops-2021/index.html#abstract",
+    "title": "Narcan cops: Officer perceptions of opioid use and willingness to carry naloxone",
+    "section": "Abstract",
+    "text": "Abstract\nBackground: Opioid use has emerged as a significant public health crisis in cities across the United States. In Arizona, opioid overdose deaths increased by 65% from 2016 to 2018, leading the Governor of Arizona to declare a State of Emergency. Because police are often the first to arrive at the scene of an overdose, officers are central to an effective response to the opioid crisis in Arizona and elsewhere. However, many police officers do not carry naloxone, which can immediately reverse the life-threatening effects of an opioid overdose. Few studies examine officer perceptions of opioid use or their willingness to carry and administer naloxone. The degree towhich officers accept this public health responsibility remains unclear.\nMethods: The authors administered two waves of a survey to patrol officers in the Tempe (AZ) Police Department.The officers completed wave 1 approximately three months before the start of a program that trained and outfitted patrol officers with naloxone. Officers completed wave 2 of the survey several months after the program started. Relying on the Opioid Overdose Knowledge (OOKS), Competence, Concerns, and Attitudes (OOAS) of People who Overdose, and Naloxone-Related Risk Compensation Beliefs (NaRRC-B) scales, the survey captures officer attitudes regarding opioid use, willingness to carry and administer naloxone, and perceptions of their role in responding to the opioid crisis.\nResults: At wave 1, officers conveyed moderate levels of confidence in recognizing an overdose and providing life-saving care. Officers indicated strong support for carrying naloxone and responding to opioid overdoses, and they recognized the value of treatment for users. At wave 2, officers reported significantly greater confidence and competence in responding to overdoses, and their support for carrying naloxone also increased. Both before and after program start, there was little variation in attitudes across gender, race/ethnicity, education, and length of service.\nConclusion: Officers accept this public health responsibility as part of their mission. Given that officers are frequently first on scene at overdoses and a matter of seconds can determine life or death, police-led naloxone programs will save lives in Tempe and elsewhere."
+  },
+  {
+    "objectID": "research/articles/leveraging-bwcs-ajph-2022/index.html#abstract",
+    "href": "research/articles/leveraging-bwcs-ajph-2022/index.html#abstract",
+    "title": "Leveraging body-worn camera footage to better understand opioid overdoses and the impact of police-administered naloxone",
+    "section": "Abstract",
+    "text": "Abstract\nObjectives. To investigate what transpires at opioid overdoses where police administer naloxone and to identify the frequency with which concerns about police-administered naloxone are observed.\nMethods. We reviewed body-worn camera (BWC) footage of all incidents where a Tempe, Arizona police officer administered naloxone or was present when the Tempe Fire Medical Rescue (TFMR) administered it, from February 3, 2020 to May 7, 2021 (n = 168). We devised a detailed coding instrument and employed univariate and bivariate analysis to examine the frequency of concerns regarding police-administered naloxone.\nResults. Police arrived on scene before the TFMR in 73.7% of cases. In 88.6% of calls the individual was unconscious when police arrived, but 94.6% survived the overdose. The primary concerns about police-administered naloxone were rarely observed. There were no cases of improper naloxone administration or accidental opioid exposure to an officer. Aggression toward police from an overdose survivor rarely occurred (3.6%), and arrests of survivors (3.6%) and others on scene (1.2%) were infrequent.\nConclusions. BWC footage provides a unique window into opioid overdoses. In Tempe, the concerns over police-administered naloxone are overstated. If results are similar elsewhere, those concerns are barriers that must be removed."
+  },
+  {
+    "objectID": "research/articles/beyond-uof-2023/index.html#abstract",
+    "href": "research/articles/beyond-uof-2023/index.html#abstract",
+    "title": "Beyond force and injuries: Examining alternative (and important) outcomes for police De-escalation training",
+    "section": "Abstract",
+    "text": "Abstract\nPurpose. The evidence on de-escalation training is limited and has focused almost exclusively on use of force as the primary outcome. We evaluate a de-escalation training program in Tempe, Arizona, delivered via a squad-based randomized controlled trial, using methods that tap into alternative outcomes in encounters that did not involve use of force.\nMethods. We conducted phone surveys with 282 randomly selected Tempe community members who had a recent encounter with Treatment and Control officers post-training. We also examined body-worn camera footage of 476 randomly selected encounters that occurred pre- (n = 230) and post-training (n = 246) with Treatment and Control officers.\nResults. Community members reported that trained officers were significantly more likely to use procedural justice and de-escalation; and were more likely to leave them satisfied with their treatment and how their encounter was resolved. Results from BWC footage were less persuasive, though trained officers were more likely to use some de-escalation tactics.\nConclusions. Use of force as a singular metric of a training effect is too narrow. A comprehensive assessment of de-escalation training should consider multiple outcomes, including the potential effects in non-force encounters. Random review of BWC footage and community member surveys are two viable methods for achieving this objective."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Seth Watts",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n\n\n\n\n\n\n\n\n\n2024\n\n\n\n\n\n\n\n\n\n\n\n\n2024\n\n\n\n\n\n\n\n\n\n\n\n\n2024\n\n\n\n\n\n\n\n\n\n\n\n\n2023\n\n\n\n\n\n\n\n\n\n\n\n\n2023\n\n\n\n\n\n\n\n\n\n\n\n\n2023\n\n\n\n\n\n\n\n\n\n\n\n\n2022\n\n\n\n\n\n\n\n\n\n\n\n\n2022\n\n\n\n\n\n\n\n\n\n\n\n\n2021\n\n\n\n\n\n\n\n\n\n\n\n\n2021\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research.html#journal-articles",
+    "href": "research.html#journal-articles",
+    "title": "Seth Watts",
+    "section": "Journal articles",
+    "text": "Journal articles\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nWho is Fatigued? Examining Officer Attitudes Towards PWUOs, Naloxone, and Their Role in Responding to Opioid Overdoses\n\n\n\n\n\n2024\n\n\n\n\n\n\n\nAutomating body-worn camera footage review through AI: baseline attitudes from a multisite randomized control trial\n\n\n\n\n\n2024\n\n\n\n\n\n\n\nDoes Proximity to Service Providers Impact Punitivity in Stop Outcomes for Individuals Experiencing Homelessness?\n\n\n\n\n\n2024\n\n\n\n\n\n\n\nBeyond force and injuries: Examining alternative (and important) outcomes for police De-escalation training\n\n\n\n\n\n2023\n\n\n\n\n\n\n\nCan police de-escalation training reduce use of force and citizen injury without compromising officer safety?\n\n\n\n\n\n2023\n\n\n\n\n\n\n\nA half-century investigation of police officer line-of-duty deaths: putting the recent spike in long-term context\n\n\n\n\n\n2023\n\n\n\n\n\n\n\nLeveraging body-worn camera footage to better understand opioid overdoses and the impact of police-administered naloxone\n\n\n\n\n\n2022\n\n\n\n\n\n\n\nInvestigating the prevalence and utility of police body-worn cameras in the George Floyd protests\n\n\n\n\n\n2022\n\n\n\n\n\n\n\nMoving Beyond Narcan: A Police, Social Service, and Researcher Collaborative Response to the Opioid Crisis\n\n\n\n\n\n2021\n\n\n\n\n\n\n\nNarcan cops: Officer perceptions of opioid use and willingness to carry naloxone\n\n\n\n\n\n2021\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research.html#working-papers",
+    "href": "research.html#working-papers",
+    "title": "Seth Watts",
+    "section": "Working papers",
+    "text": "Working papers"
+  },
+  {
+    "objectID": "research/articles/beyond-narcan-2021/index.html#abstract",
+    "href": "research/articles/beyond-narcan-2021/index.html#abstract",
+    "title": "Moving Beyond Narcan: A Police, Social Service, and Researcher Collaborative Response to the Opioid Crisis",
+    "section": "Abstract",
+    "text": "Abstract\nThe opioid crisis is the most persistent, long-term public health emergency facing the United States, and available evidence suggests the crisis has worsened during the COVID-19 global pandemic. Naloxone is an effective overdose response that saves lives, but the drug does not address problematic drug use, addiction, or the underlying conditions that lead to overdoses. The opioid crisis is at its core a multidisciplinary, multisystem problem, and an effective response to the crisis requires collaboration across those various systems. This paper describes such a collaborative effort. The Tempe First-Responder Opioid Recovery Project is a multidisciplinary partnership that includes police officers, social workers, substance use peer counselors, public health professionals, police researchers, and drug policy/harm reduction researchers. The project, 10 months underway, trained and equipped Tempe (AZ) police officers to administer Narcan. In addition, a 24/7 in-person “Crisis Outreach Response Team” rapidly responds to any suspected overdose and offers follow-up support, referrals, and services to the individual (and loved ones) for up to 45 days after the overdose. We present preliminary project data including interviews with project managers, counselors, and police officers, descriptions of Narcan administrations in the field, and aggregate data on client service engagement. These data highlight the complexity of the opioid crisis, the collaborative nature of the Tempe project, and the importance of initiating a multidisciplinary, comprehensive response to effectively deal with the opioid problem."
+  },
+  {
+    "objectID": "research/articles/deescalation-force-citzinjury-2023/index.html#abstract",
+    "href": "research/articles/deescalation-force-citzinjury-2023/index.html#abstract",
+    "title": "Can police de-escalation training reduce use of force and citizen injury without compromising officer safety?",
+    "section": "Abstract",
+    "text": "Abstract\nObjectives. We test the impact of de-escalation training on the behavior of officers in the Tempe (AZ) Police Department.\nMethods. The training was delivered via a squad-based randomized controlled trial. We examine administrative use of force data and body-worn camera footage for all use of force encounters six months pre- and post-training. Outcomes include prevalence and force types used, encounter duration, and citizen and officer injuries.\nOutcomes. Use of force declined for Treatment and Control squads, likely because of the global pandemic. Trained officers decreased use of certain force types likely to produce injury. Trained officers spent significantly more time on scene, and they were 58% less likely to injure community members. These changes occurred with no increased risk of officer injury.\nConclusions. The differences in key outcomes are consistent with a positive training effect. Factors that may explain the results include the curriculum development process, focus on officer safety/wellness, officer receptivity, and use of refresher trainings.\nSimilar content being viewed by others"
+  },
+  {
+    "objectID": "research/articles/line-of-duty-deaths-2024/index.html#abstract",
+    "href": "research/articles/line-of-duty-deaths-2024/index.html#abstract",
+    "title": "A half-century investigation of police officer line-of-duty deaths: putting the recent spike in long-term context",
+    "section": "Abstract",
+    "text": "Abstract\nResearch has documented long-term large declines in police line-of-duty deaths over the last 5 decades. The persistence of this decline has been challenged recently by an unprecedented dual threat to officer safety: increased violent attacks on police and the COVID-19 pandemic. We examine all local, county, state, and federal officer line-of-duty deaths from 1970–2021 using data from the Officer Down Memorial Page (ODMP). We examine long-term trends and conduct a decade-by-decade analysis of those deaths. More officers died in 2021 than in any year in the last half-century. Violent killings of police reached the highest level in 20 years, and 523 officers died from COVID-19 in a two-year span. At the state level, there is a significant association between the prevalence of police officer deaths resulting from COVID-19 and general population vaccination rates. We explore the implications of these findings for agency policy and practice with regard to officer safety."
+  },
+  {
+    "objectID": "research/articles/prevelance-utility-bwcs-protests-2022/index.html#abstract",
+    "href": "research/articles/prevelance-utility-bwcs-protests-2022/index.html#abstract",
+    "title": "Investigating the prevalence and utility of police body-worn cameras in the George Floyd protests",
+    "section": "Abstract",
+    "text": "Abstract\nPurpose – Unlike protests against police brutality in the past (2014 and earlier), police officers responding to First Amendment-protected demonstrations in summer 2020 likely were wearing body-worn cameras(BWCs). This study seeks to understand police perceptions of the effects of BWCs when used in the George Floyd protests.\nDesign/methodology/approach – The authors use survey data from 100 agencies with federally-funded BWCs to assess the prevalence of BWC deployment to George Floyd protests and perceived benefits and limitations of the technology within this unique context.\nFindings – About three-quarters of agencies encountered some level of demonstration/protest related to the killing of George Floyd, and the majority of those deployed BWCs during these demonstrations. Respondents indicated evidentiary value of footage was a key reason for doing so, and at least three preconditions for a civilizing effect were present."
+  },
+  {
+    "objectID": "research/articles/tempe-compassion-fatigue-2024/index.html#abstract",
+    "href": "research/articles/tempe-compassion-fatigue-2024/index.html#abstract",
+    "title": "Who is Fatigued? Examining Officer Attitudes Towards PWUOs, Naloxone, and Their Role in Responding to Opioid Overdoses",
+    "section": "Abstract",
+    "text": "Abstract\nMany police departments have equipped their officers with naloxone as a promising response to the opioid crisis. Though research suggests police can effectively administer naloxone, recent studies suggest that officers may develop negative attitudes over time as they continually respond to overdoses. This has been described as a “compassion fatigue” effect. We investigate the compassion fatigue hypothesis with a repeated cross-sectional survey of officers in the Tempe, Arizona Police Department. We focus on three outcomes (1) perceptions of officers’ role in responding to overdoses, (2) perceptions of naloxone related risk-compensation beliefs, and (3) stigmatizing perceptions of people who use opioids (PWUOs). We run one-way fixed effects regression models to assess if officer attitudes have changed over the study period. Then we run multivariate regression models to test whether officers’ opioid overdose response frequency is associated with any of the three outcomes. The findings suggest officers have become more supportive of responding to overdoses but have developed more stigmatizing views of PWUOs over time. This warrants further research attention. However, opioid overdose response frequency was not associated with any of the outcomes. We conclude with a discussion of these findings and their implications for police involvement in the opioid overdose crisis.\n\nVersion: Post-print\nNote: The above post-print is a pre-copyedited, author-produced version of an article accepted for publication in the Journal of Criminal Justice. The version of record is available online at https://doi.org/10.1016/j.jcrimjus.2024.102308.\nCitation: Watts, S., White, M. D., Perrone, D., & Malm, A. (2024). Who is fatigued? A repeated cross-sectional survey of officer attitudes towards people who use opioids, naloxone, and their role in responding to opioid overdoses. Journal of Criminal Justice, 95, 102308."
+  }
+]

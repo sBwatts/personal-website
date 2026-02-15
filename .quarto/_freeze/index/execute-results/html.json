@@ -1,0 +1,15 @@
+{
+  "hash": "5449c8f37adaef09b84685e296de62a8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"website\"\npage-layout: full\n\nabout:\n  id: hero-heading\n  template: trestles\n  # image-width: 70%\n  links:\n    - icon: sun\n      text: Lab\n      href: https://www.github.com\n      target: _blank\n    - icon: globe\n      text: Uprofile\n      href: https://baruch.cuny.edu\n      target: _blank\n    - icon: envelope\n      text: E-mail\n      href: mailto:email@gmail.com    \n    - icon: linkedin\n      text: LinkedIn\n      href: https://linkedin.com\n      target: _blank\n    - icon: youtube\n      text: YouTube\n      href: https://www.youtube.com     \n      target: _blank \n    - text: \"{{< ai orcid >}} ORCID\"   # use academic icons, \"\" are needed, you also need to install the fontawesome extension\n      href: https://orcid.org\n      target: _blank\n    - text: \"{{< ai clarivate >}} Web of Science\"\n      href: https://www.webofscience.com  \n      target: _blank\n    - text: \"{{< ai scopus >}} Scopus\"\n      href: https://www.scopus.com\n      target: _blank\n    - text: \"{{< ai google-scholar >}} Google Scholar\"\n      href: https://scholar.google.com\n      target: _blank\n#    - text: \"{{< ai researchgate >}} Research Gate\"\n#      href: https://www.researchgate.net\n#      target: _blank\n\nlisting:   # Comment the listing section and delete corresponding lines in the index.qmd file to remove the recent posts\n  - id: recent-posts\n    contents: \n      - posts\n      - posts/post-links.yml\n    exclude:\n      title: \"\"\n    type: grid\n    max-items: 3\n#    image-height: 150px\n    page-size: 3 #set same as max-times to remove the page number setting\n    fields: [image, date, title, subtitle]\n    max-description-length: 75\n    sort: \n      - \"date desc\"\n      - \"title asc\"\n---\n\nThis is a Quarto website.\n\nTo learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

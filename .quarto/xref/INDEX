@@ -1,0 +1,95 @@
+{
+  "index.qmd": {
+    "index.html": "2ac297ed"
+  },
+  "about.qmd": {
+    "about.html": "846b8af8"
+  },
+  "research.qmd": {
+    "research.html": "9f239d79"
+  },
+  "research/articles/beyond-narcan-2021/index.qmd": {
+    "index.html": "329eb133"
+  },
+  "research/articles/beyond-uof-2023/index.qmd": {
+    "index.html": "395f8de6"
+  },
+  "research/articles/deescalation-force-citzinjury-2023/index.qmd": {
+    "index.html": "9b8bffd9"
+  },
+  "research/articles/leveraging-bwcs-ajph-2022/index.qmd": {
+    "index.html": "0a23cc91"
+  },
+  "research/articles/line-of-duty-deaths-2024/index.qmd": {
+    "index.html": "a17f45ba"
+  },
+  "research/articles/narcan-cops-2021/index.qmd": {
+    "index.html": "1f683d48"
+  },
+  "research/articles/prevelance-utility-bwcs-protests-2022/index.qmd": {
+    "index.html": "c2791661"
+  },
+  "research/articles/proximity-service-providers-2024/index.qmd": {
+    "index.html": "7b581aff"
+  },
+  "research/articles/tempe-compassion-fatigue-2024/index.qmd": {
+    "index.html": "2bff5a47"
+  },
+  "research/articles/truleo-baseline-perceptions-2024/index.qmd": {
+    "index.html": "dc13a9df"
+  },
+  "research/articles/a-half-century-investigation-of-police-officer-line-of-duty-deaths-putting-the-r/index.qmd": {
+    "index.html": "2a1a745e"
+  },
+  "research/articles/ai-in-policing-capturing-police-performance-good-and-bad-in-routine-rare-and-nov/index.qmd": {
+    "index.html": "3cd12d14"
+  },
+  "research/articles/an-evaluation-of-truleos-ai-based-body-worn-camera-analytics/index.qmd": {
+    "index.html": "baf4e8f1"
+  },
+  "research/articles/automating-body-worn-camera-footage-review-through-ai-baseline-attitudes-from-a-/index.qmd": {
+    "index.html": "1a6443b4"
+  },
+  "research/articles/automating-body-worn-camera-footage-review-through-ai-preliminary-findings-from-/index.qmd": {
+    "index.html": "8634ea8c"
+  },
+  "research/articles/beyond-force-and-injuries-examining-alternative-and-important-outcomes-for-polic/index.qmd": {
+    "index.html": "b5a7ed88"
+  },
+  "research/articles/can-de-escalation-training-reduce-use-of-force-and-injuries-to-citizens-without-/index.qmd": {
+    "index.html": "ce74efa3"
+  },
+  "research/articles/can-police-de-escalation-training-reduce-use-of-force-and-citizen-injury-without/index.qmd": {
+    "index.html": "18d985ab"
+  },
+  "research/articles/does-automated-feedback-impact-the-acceptability-of-ai-generated-police-body-wor/index.qmd": {
+    "index.html": "8c5d9a6a"
+  },
+  "research/articles/does-proximity-to-service-providers-impact-punitivity-in-stop-outcomes-for-indiv/index.qmd": {
+    "index.html": "f7606b71"
+  },
+  "research/articles/investigating-the-prevalence-and-utility-of-police-body-worn-cameras-in-the-geor/index.qmd": {
+    "index.html": "b07e56b6"
+  },
+  "research/articles/leveraging-body-worn-camera-footage-to-better-understand-opioid-overdoses-and-th/index.qmd": {
+    "index.html": "b53d33e9"
+  },
+  "research/articles/more-than-use-of-force-examining-alternative-outcomes-for-police-de-escalation-t/index.qmd": {
+    "index.html": "cea4cd92"
+  },
+  "research/articles/moving-beyond-narcan-a-police-social-service-and-researcher-collaborative-respon/index.qmd": {
+    "index.html": "c84c544a"
+  },
+  "research/articles/narcan-cops-officer-perceptions-of-opioid-use-and-willingness-to-carry-naloxone/index.qmd": {
+    "index.html": "260256f4"
+  },
+  "research/articles/officer-acceptance-and-use-of-ai-driven-body-worn-camera-footage-review/index.qmd": {
+    "index.html": "708a2f4a"
+  },
+  "research/articles/understanding-police-involvement-at-opioid-overdose-incidents-through-body-worn-/index.qmd": {
+    "index.html": "7f49d01a"
+  },
+  "research/articles/who-is-fatigued-a-repeated-cross-sectional-survey-of-officer-attitudes-towards-p/index.qmd": {
+    "index.html": "78e130b3"
+  }
+}

@@ -1,0 +1,67 @@
+---
+title: ""
+page-layout: full
+image: "headshot.jpeg"
+
+about:
+  id: hero-heading
+  template: trestles
+  image-width: 75%
+  image-shape: round
+  links:
+    - icon: globe
+      text: Faculty page
+      href: https://faculty.txst.edu/profile/2630442
+      target: _blank
+    - icon: envelope
+      text: E-mail
+      href: mailto:sbwatts@txstate.edu
+    - icon: github
+      text: Github
+      href: https://github.com/sBwatts
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/sethwatts1/
+      target: _blank
+    - text: "{{< ai orcid >}} ORCID"   # use academic icons, "" are needed, you also need to install the fontawesome extension
+      href: https://orcid.org/0000-0002-5108-9055
+      target: _blank
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=_zgKKS0AAAAJ&hl=en&oi=ao
+      target: _blank
+
+listing:
+  - id: articles
+    contents: 
+      - research/articles
+      # - posts/post-links.yml
+    exclude:
+      title: ""
+    type: grid
+    max-items: 3
+#   image-height: 150px
+    page-size: 3 
+    fields: [date, title, subtitle, author]
+    max-description-length: 75
+    sort: 
+      - "date desc"
+      - "title asc"
+---
+
+
+::: {#hero-heading}
+### About me
+
+I am an assistant professor at Texas State University. My research centers on policing, specifically technology, innovation, and the interface between police and public health.
+:::
+
+<!-- Delete the following section and delete corresponding lines in the yaml part to remove the recent posts -->
+### Recent activity
+<!-- Check out the latest &nbsp;[Papers](research.qmd#category=article) -->
+
+<!-- &nbsp;, &nbsp;[News](posts.qmd#category=news)&nbsp;, &nbsp;[Events](posts.qmd#category=event)&nbsp;, and &nbsp;[More »](/posts.qmd) -->
+
+:::{#articles}
+:::
+
+<p align="right">[All publications »](research.qmd)</p>

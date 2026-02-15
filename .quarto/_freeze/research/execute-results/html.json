@@ -1,0 +1,15 @@
+{
+  "hash": "47f25eed01dc6a4e34b5104ca802cf01",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\nlisting:\n    - id: articles\n      contents: \"articles/*/index.qmd\"\n      sort: \"date desc\"\n      type: grid\n      # categories: cloud\n      page-size: 100\n      sort-ui: true\n      feed: true\n      filter-ui: true\n      table-hover: false\n      fields: [date, author, title]\n#   # - id: working-papers\n#   #   contents: \"working/*/index.qmd\"\n#   #   sort: \"date desc\"\n#   #   type: default\n#   #   categories: false\n#   #   sort-ui: false\n#   #   # filter-ui: false\n#   #   # table-hover: true\n#   #   fields: [title]\n#\ndate-format: \"YYYY\"\npage-layout: full\n# title-block-banner: true\ncss: styles.css\n---\n\n\n::: {.cell}\n\n:::\n\n\n## Citation Metrics\n\n::::::::: grid\n:::: {.g-col-12 .g-col-md-4}\n::: {.card style=\"padding: 1.0rem; text-align: center;\"}\n<h3 style=\"margin-top: 0; color: var(--primary); font-size: 2.0rem; font-weight: 700;\">\n\n173\n\n</h3>\n\n<p style=\"margin-bottom: 0; font-size: 1.0rem; color: var(--secondary);\">\n\nTotal Citations\n\n</p>\n\n<p style=\"margin-top: 0.25rem; font-size: 0.9rem; color: var(--secondary);\">\n\n(173 since 2019)\n\n</p>\n:::\n::::\n\n:::: {.g-col-12 .g-col-md-4}\n::: {.card style=\"padding: 1.0rem; text-align: center;\"}\n<h3 style=\"margin-top: 0; color: var(--primary); font-size: 2.0rem; font-weight: 700;\">\n\n7\n\n</h3>\n\n<p style=\"margin-bottom: 0; font-size: 1.0rem; color: var(--secondary);\">\n\nh-index\n\n</p>\n\n<p style=\"margin-top: 0.25rem; font-size: 0.9rem; color: var(--secondary);\">\n\n(7 since 2019)\n\n</p>\n:::\n::::\n\n:::: {.g-col-12 .g-col-md-4}\n::: {.card style=\"padding: 1.0rem; text-align: center;\"}\n<h3 style=\"margin-top: 0; color: var(--primary); font-size: 2.0rem; font-weight: 700;\">\n\n6\n\n</h3>\n\n<p style=\"margin-bottom: 0; font-size: 1.0rem; color: var(--secondary);\">\n\ni10-index\n\n</p>\n\n<p style=\"margin-top: 0.25rem; font-size: 0.9rem; color: var(--secondary);\">\n\n(6 since 2019)\n\n</p>\n:::\n::::\n:::::::::\n\n<p style=\"text-align: center; margin-top: 1rem; font-size: 0.85rem; color: var(--secondary);\">\n\nMetrics from [Google Scholar](https://scholar.google.com/citations?user=_zgKKS0AAAAJ) • Last updated: 2026-02-12 23:17:13\n\n</p>\n\n------------------------------------------------------------------------\n\n## Publications\n\nCompiled using an automated script pulling from [OpenAlex](https://openalex.org/).\n\n::: {#articles}\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

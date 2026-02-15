@@ -1,0 +1,10 @@
+{
+  "listingMap": {
+    "index.qmd": [
+      "research/articles"
+    ],
+    "research.qmd": [
+      "articles/*/index.qmd"
+    ]
+  }
+}

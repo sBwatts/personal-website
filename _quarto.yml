@@ -1,0 +1,58 @@
+project:
+  type: website
+  render: 
+    - "*.qmd"
+    - "!cv/**"
+  pre-render:
+    - Rscript cv/cv_render.R
+    # - Rscript call-scholar-stats.R
+    - Rscript call-python.R
+  resources:
+    - cv/cv.pdf
+  output-dir: docs
+
+website:
+  title: "Seth Watts, PhD"
+  navbar:
+
+    right:
+      - href: index.qmd
+        text: Home
+      - text: Research
+        menu: 
+          - text: Publications
+            href: research.qmd
+          - text: CV
+            href: cv/cv.pdf
+      # - text: Teaching
+      # - href: teaching.qmd
+      # - text: Talks
+      #   menu:
+      #     - text: Conferences
+      #       href: talks/conferences
+      #     - text: Other
+      #       href: talks/other
+
+  page-footer: 
+    center: "Seth Watts &copy; <script>document.write(new Date().getFullYear())</script>" 
+    
+  site-url: https://www.sethbwatts.com/
+        
+format:
+  html:
+    css: styles.css
+    include-in-header: "files/includes/_dark-mode-toggle.html"
+    # toc: true
+    footnotes-hover: true
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+    fig-align: center
+    link-external-icon: false
+    link-external-newwindow: true
+    email-obfuscation: javascript
+    # link-external-filter: '^(?:http:|https:)\/\/drganghe\.github\.io\/custom'
+    # include-in-header: "files/includes/_academic.qmd"
+
+editor: visual
+
