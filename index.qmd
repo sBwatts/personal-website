@@ -6,7 +6,7 @@ image: "headshot.jpeg"
 about:
   id: hero-heading
   template: trestles
-  image-width: 60%
+  image-width: 65%
   image-shape: round
   links:
     - icon: globe
