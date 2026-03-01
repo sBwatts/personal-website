@@ -2,6 +2,7 @@
 title: 'Moving Beyond Narcan: A Police, Social Service, and Researcher Collaborative Response to the Opioid Crisis'
 author: Michael D. White, Dina Perrone, Seth Watts et al.
 date: '2021-07-03'
+subtitle: American Journal of Criminal Justice
 doi: 10.1007/s12103-021-09625-w
 citation-url: https://doi.org/10.1007/s12103-021-09625-w
 format:

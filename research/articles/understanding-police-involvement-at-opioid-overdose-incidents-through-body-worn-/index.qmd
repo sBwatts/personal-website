@@ -2,6 +2,7 @@
 title: Understanding Police Involvement at Opioid Overdose Incidents Through Body-Worn Camera Footage
 author: Seth Watts, Michael D. White, Carlena Orosco et al.
 date: '2024-09-04'
+subtitle: Applied police briefings
 doi: 10.22215/apb.v1i2.5019
 citation-url: https://doi.org/10.22215/apb.v1i2.5019
 format:
@@ -11,7 +12,7 @@ format:
 
 ## Publication Details
 
-**Published in:** Applied police briefings :
+**Published in:** Applied police briefings
 
 **Open Access:** Yes
 

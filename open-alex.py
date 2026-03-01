@@ -128,7 +128,7 @@ class OpenAlexArticleSync:
                 'open_access': work.get('open_access', {}).get('is_oa', False),
                 'pdf_url': work.get('open_access', {}).get('oa_url', ''),
                 'cited_by_count': cited_by_count,
-                'publication_venue': work.get('primary_location', {}).get('source', {}).get('display_name', ''),
+                'publication_venue': (work.get('primary_location', {}).get('source', {}).get('display_name', '') or '').rstrip(' :').strip(),
                 'openalex_id': work.get('id', ''),
                 'work_type': work.get('type', ''),
             }
@@ -176,10 +176,10 @@ class OpenAlexArticleSync:
             'author': article['author'],
             'date': article['date'],
         }
-        
-        # if is_preprint:
-        #     yaml_data['subtitle'] = '🔬 Preprint'
-        
+
+        if article.get('publication_venue'):
+            yaml_data['subtitle'] = article['publication_venue']
+
         if article.get('description') and article['description'] != 'No abstract available.':
             yaml_data['description'] = article['description']
         
@@ -252,11 +252,15 @@ This is a preprint that has not undergone peer review. Findings should be interp
         ).strip()
         
         index_content = f"---\n{yaml_str}\n---\n\n{content_body}"
-        
+
         index_file = article_path / 'index.qmd'
+        if index_file.exists() and index_file.read_text(encoding='utf-8') == index_content:
+            print(f"- Unchanged: {slug}")
+            return article_path
+
         with open(index_file, 'w', encoding='utf-8') as f:
             f.write(index_content)
-        
+
         print(f"✓ Created: {slug}{' 🔬' if is_preprint else ''}")
         return article_path
     

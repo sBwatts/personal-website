@@ -70,10 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.5rem;
-  background: linear-gradient(135deg, #1e293b 0%, #1e293b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--dark);
 }
 
 h2 {
@@ -91,7 +88,7 @@ h3 {
 
 /* Navigation */
 .navbar {
-  background: #64748b;
+  background: #1e293b;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -109,71 +106,20 @@ h3 {
   
 }
 
-/*
-
+/* Nav links (white text on dark navbar) */
 .navbar .nav-link,
-.navbar .navbar-nav .nav-link,
-.navbar-nav .nav-item > a {
+.navbar .navbar-brand,
+.navbar .dropdown-toggle {
+  color: rgba(255, 255, 255, 0.9) !important;
   font-weight: 500;
-  color: #1e293b !important; /* Added !important to override */
   transition: color 0.2s ease;
 }
 
 .navbar .nav-link:hover,
-.navbar .navbar-nav .nav-link:hover,
-.navbar-nav .nav-item > a:hover {
-  color: var(--primary) !important;
-}
-
-/* For dropdown toggles specifically */
-/* .navbar .dropdown-toggle {
-  color: #1e293b !important;
-}
-
 .navbar .dropdown-toggle:hover {
-  color: var(--primary) !important;
-} */
-
-.navbar-toggler {
-  border: 1px solid rgba(0, 0, 0, 0.1); /* Optional subtle border */
-  border-radius: var(--border-radius);
-  padding: 0.5rem;
+  color: white !important;
 }
 
-.hamburger-lines {
-  display: block;
-  background: #64748b;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-.hamburger-lines span,
-.hamburger-lines span::before,
-.hamburger-lines span::after {
-  display: block;
-  background-color: #1e293b; /* Matches your nav-link color */
-  height: 2px;
-  width: 25px;
-  border-radius: 1px;
-  transition: 0.3s;
-  position: relative;
-}
-
-.hamburger-lines span::before,
-.hamburger-lines span::after {
-  content: '';
-  position: absolute;
-  left: 0;
-}
-
-.hamburger-lines span::before {
-  top: -8px;
-}
-
-.hamburger-lines span::after {
-  bottom: -8px;
-} 
 
 /* Code blocks */
 pre {

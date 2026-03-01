@@ -2,6 +2,7 @@
 title: 'Narcan cops: Officer perceptions of opioid use and willingness to carry naloxone'
 author: Michael D. White, Dina Perrone, Aili Malm et al.
 date: '2021-01-01'
+subtitle: Journal of Criminal Justice
 doi: 10.1016/j.jcrimjus.2020.101778
 citation-url: https://doi.org/10.1016/j.jcrimjus.2020.101778
 format:

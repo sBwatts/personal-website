@@ -11,7 +11,7 @@ listing:
       feed: true
       filter-ui: true
       table-hover: false
-      fields: [date, author, title]
+      fields: [date, title, subtitle]
 #   # - id: working-papers
 #   #   contents: "working/*/index.qmd"
 #   #   sort: "date desc"

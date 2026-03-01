@@ -2,6 +2,7 @@
 title: An Evaluation of Truleo’s AI-based Body-Worn Camera Analytics
 author: Michael D. White, Seth Watts, Aili Malm
 date: '2025-03-31'
+subtitle: CrimRxiv
 doi: 10.21428/cb6ab371.45f5258f
 citation-url: https://doi.org/10.21428/cb6ab371.45f5258f
 format:

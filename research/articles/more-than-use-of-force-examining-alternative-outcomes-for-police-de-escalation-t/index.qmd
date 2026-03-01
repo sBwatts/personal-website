@@ -2,6 +2,7 @@
 title: 'More Than Use of Force: Examining Alternative Outcomes for Police De-Escalation Training'
 author: Michael D. White, Carlena Orosco, Seth Watts
 date: '2024-09-04'
+subtitle: Applied police briefings
 doi: 10.22215/apb.v1i2.5010
 citation-url: https://doi.org/10.22215/apb.v1i2.5010
 format:
@@ -11,7 +12,7 @@ format:
 
 ## Publication Details
 
-**Published in:** Applied police briefings :
+**Published in:** Applied police briefings
 
 **Citations:** 1
 

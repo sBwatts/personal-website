@@ -54,19 +54,11 @@ listing:
 I am an assistant professor at Texas State University. My research centers on policing, specifically technology, innovation, and the interface between police and public health.
 :::
 
-<!-- Delete the following section and delete corresponding lines in the yaml part to remove the recent posts -->
-
 ### Recent activity
-
-<!-- Check out the latest &nbsp;[Papers](research.qmd#category=article) -->
-
-<!-- &nbsp;, &nbsp;[News](posts.qmd#category=news)&nbsp;, &nbsp;[Events](posts.qmd#category=event)&nbsp;, and &nbsp;[More »](/posts.qmd) -->
 
 ::: {#articles}
 :::
 
-<p align="right">
-
+::: {style="text-align: right;"}
 [All publications »](research.qmd)
-
-</p>
+:::
