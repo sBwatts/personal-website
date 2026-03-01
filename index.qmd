@@ -8,27 +8,6 @@ about:
   template: trestles
   image-width: 65%
   image-shape: round
-  links:
-    - icon: globe
-      text: Faculty page
-      href: https://faculty.txst.edu/profile/2630442
-      target: _blank
-    - icon: envelope
-      text: E-mail
-      href: mailto:sbwatts@txstate.edu
-    - icon: github
-      text: Github
-      href: https://github.com/sBwatts
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/sethwatts1/
-      target: _blank
-    - text: "{{< ai orcid >}} ORCID"   # use academic icons, "" are needed, you also need to install the fontawesome extension
-      href: https://orcid.org/0000-0002-5108-9055
-      target: _blank
-    - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=_zgKKS0AAAAJ&hl=en&oi=ao
-      target: _blank
 
 listing:
   - id: articles

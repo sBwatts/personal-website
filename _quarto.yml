@@ -20,7 +20,7 @@ website:
       - href: index.qmd
         text: Home
       - text: Research
-        menu: 
+        menu:
           - text: Publications
             href: research.qmd
           - text: CV
@@ -33,6 +33,16 @@ website:
       #       href: talks/conferences
       #     - text: Other
       #       href: talks/other
+    tools:
+      - icon: github
+        href: https://github.com/sBwatts
+        target: _blank
+      - icon: twitter-x
+        href: https://x.com/SethBWatts
+        target: _blank
+      - icon: linkedin
+        href: https://www.linkedin.com/in/sethwatts1/
+        target: _blank
 
   page-footer: 
     center: "Seth Watts &copy; <script>document.write(new Date().getFullYear())</script>" 
