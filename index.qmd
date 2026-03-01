@@ -51,7 +51,11 @@ listing:
 ::: {#hero-heading}
 ### About me
 
-I am an assistant professor at Texas State University. My research centers on policing, specifically technology, innovation, and the interface between police and public health.
+I am an assistant professor at [Texas State University](https://www.txst.edu), studying policing at the intersection of technology, innovation, and public health. My work examines how emerging tools — from AI-assisted body-worn cameras to de-escalation training — shape police behavior and community outcomes.
+
+::: {.research-chips}
+[Policing]{.chip} [Technology & AI]{.chip} [De-escalation]{.chip} [Use of Force]{.chip} [Public Health]{.chip} [Body-Worn Cameras]{.chip}
+:::
 :::
 
 ### Recent activity
