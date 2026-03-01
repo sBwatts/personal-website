@@ -50,6 +50,7 @@ website:
         
 format:
   html:
+    theme: flatly
     css: styles.css
     # toc: true
     footnotes-hover: true
@@ -60,7 +61,7 @@ format:
     link-external-icon: false
     link-external-newwindow: true
     email-obfuscation: javascript
-    # include-in-header: "files/includes/_academic.qmd"
+    include-in-header: "files/includes/_dark-mode-toggle.html"
 
 editor: visual
 
