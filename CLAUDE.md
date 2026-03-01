@@ -49,3 +49,37 @@ Pre-render scripts in `_quarto.yml` run automatically before every render:
 - **Python**: `requests`, `pyyaml` (see `requirements.txt`)
 - **R**: `rmarkdown`, `reticulate`, `stevetemplates`
 - **TinyTeX/LaTeX** for CV PDF generation
+
+## Git Workflow
+
+All changes to this repository must be committed and pushed to GitHub with clear, descriptive commit messages.
+
+### Commit Message Guidelines
+
+- Use the imperative mood: "Add feature" not "Added feature"
+- Keep the first line under 72 characters
+- Describe *what* changed and *why*, not *how*
+- Examples:
+  - `Fix 404 on de-escalation article by adding missing rendered HTML`
+  - `Update publications: add comparative de-escalation review (2026-02-16)`
+  - `Update CV to reflect new publications`
+
+### Push Workflow
+
+```bash
+# Stage specific files (never use git add -A blindly)
+git add <file1> <file2>
+
+# Commit with a clear message
+git commit -m "Short descriptive message explaining the change"
+
+# Push to the current branch
+git push -u origin <branch-name>
+```
+
+### Important Rules
+
+- **Always push** after committing — local-only commits are not deployed
+- **Never force-push** to `main` without explicit confirmation
+- **Never skip hooks** (`--no-verify`) unless explicitly requested
+- The `docs/` directory is the deployed site — changes there go live when pushed to the branch tracked by GitHub Pages
