@@ -1,5 +1,6 @@
 ---
-title: ""
+title: "Seth Watts, PhD"
+subtitle: "Texas State University"
 page-layout: full
 image: "headshot.jpeg"
 
@@ -30,10 +31,10 @@ listing:
 ::: {#hero-heading}
 ### About me
 
-I am an assistant professor at [Texas State University](https://www.txst.edu), studying policing at the intersection of technology, innovation, and public health. My work examines how emerging tools — from AI-assisted body-worn cameras to de-escalation training — shape police behavior and community outcomes.
+I am an assistant professor at [Texas State University](https://www.txst.edu), studying policing, technological innovation, and responses to public health issues. My work examines how emerging tools or innovation approaches — from AI-assisted body-worn cameras to co-response models — shape police behavior and community outcomes.
 
 ::: {.research-chips}
-[Policing]{.chip} [Technology & AI]{.chip} [De-escalation]{.chip} [Use of Force]{.chip} [Public Health]{.chip} [Body-Worn Cameras]{.chip}
+[Policing]{.chip} [Technology & AI]{.chip} [Body-Worn Cameras]{.chip} [De-escalation]{.chip} [Public Health]{.chip} 
 :::
 :::
 

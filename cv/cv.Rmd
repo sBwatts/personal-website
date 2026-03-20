@@ -20,15 +20,27 @@ rdateformat: "`r format(Sys.time(), '%d %b %Y')`"
 keywords: R Markdown, academic CV, template
 
 header-includes:
-  - \usepackage{xcolor}
-  - \definecolor{txst}{HTML}{501214}
+  # - \usepackage{xcolor}
+  # - \definecolor{txst}{HTML}{501214}
   
 fontfamily: mathpazo
 fontfamilyoptions: sc, osf
 fontsize: 11pt
-linkcolor: txst
-urlcolor: txst
+# linkcolor: txst
+# urlcolor: txst
 ---
+
+```{r scholar-stats, include=FALSE}
+library(scholar)
+scholar_id <- "_zgKKS0AAAAJ"
+profile <- tryCatch(
+  get_profile(scholar_id),
+  error = function(e) NULL
+)
+gs_cites  <- if (!is.null(profile)) profile$total_cites else "N/A"
+gs_hindex <- if (!is.null(profile)) profile$h_index     else "N/A"
+gs_i10    <- if (!is.null(profile)) profile$i10_index   else "N/A"
+```
 
 # Education
 
@@ -60,15 +72,17 @@ Graduate Research Assistant | Arizona State University \hfill 2020-2024
 
 # Work in Progress
 
-Watts, S., Orosco, C., & White, D. M. De-escalation Training: A Comparative Review of Tempe, ICAT, T3, and BSI. (Book chapter)
+Watts, S., White, D, M., & Malm, A. Officer Perceptions of AI-Based Performance Evaluation: A Latent Class Analysis of Attitudinal Profiles Before and After Deployment.
 
-Watts, S., White, D, M., & Malm, A. AI in Policing: Capturing Police Performance (Good and Bad) in Routine, Rare, and Novel Events. (Book Chapter)
+Watts, S., Orosco, C., & White, D. M. De-escalation Training: A Comparative Review of Tempe, ICAT, T3, and BSI. [pre-print](https://www.crimrxiv.com/pub/69g05cuu/release/1)
+
+Watts, S., White, D, M., & Malm, A. AI in Policing: Capturing Police Performance (Good and Bad) in Routine, Rare, and Novel Events. [pre-print](https://www.crimrxiv.com/pub/k4k0rpp1/release/1)
 
 White, M. D., Watts, S., & Malm, A. (2025). An Evaluation of Truleo’s AI-based Body-Worn Camera Analytics. (Preliminary findings: [pre-print](https://www.crimrxiv.com/pub/hy6q0g5t))
 
 # Publications
 
-[Google Scholar Profile](https://scholar.google.com/citations?user=_zgKKS0AAAAJ&hl=en&oi=ao): total citations = 173, h-index = 7, i10-index = 6
+[Google Scholar Profile](https://scholar.google.com/citations?user=_zgKKS0AAAAJ&hl=en&oi=ao): total citations = `r gs_cites`, h-index = `r gs_hindex`, i10-index = `r gs_i10`
 
 ## Peer-Reviewed Journal Articles
 
@@ -181,11 +195,14 @@ White, M. D., Watts, S., Orosco, C., Malm, A., & Perrone, D (March, 2022). Myth 
 White, M. D., Orosco, C. A., Watts, S., Malm, A., & Perrone, D (2020). The Tempe First Responder Opioid Recovery Project. *Southern Criminal Justice Association*.$^P$
 
 ## Other Presentations
-Watts, S. Repeatability, Reproducibility, and Replicability: Developing Transparent and Efficient Workflows. (November, 2025). Texas State University CJ "brown bag" series.
 
-White, M. D., Watts, S., & Malm, A. (March, 2025). Perceptions, use, and impact of Truleo in three Arizona law enforcement agencies. Truleo’s AI Innovation Day.$^P$
+Watts, S. Investigating the Intersection of Policing, Opioids, and Place. (February, 2026). *Interdisciplinary Policing Research Workshop*
 
-White, M. D. & Watts, S. (January, 2024). Making the Invisible Visible: Body-Worn Cameras as a Tool for Uncovering Bad (and Good) Policing. ASU CCJ Colloquium Series. 
+Watts, S. Repeatability, Reproducibility, and Replicability: Developing Transparent and Efficient Workflows. (November, 2025). *Texas State University CJ "brown bag" series*.
+
+White, M. D., Watts, S., & Malm, A. (March, 2025). Perceptions, use, and impact of Truleo in three Arizona law enforcement agencies. *Truleo’s AI Innovation Day*.$^P$
+
+White, M. D. & Watts, S. (January, 2024). Making the Invisible Visible: Body-Worn Cameras as a Tool for Uncovering Bad (and Good) Policing. *ASU CCJ Colloquium Series*. 
 
 # Teaching Experience
 
