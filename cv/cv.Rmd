@@ -30,6 +30,10 @@ fontsize: 11pt
 # urlcolor: txst
 ---
 
+```{r install-scholar, include=FALSE}
+if (!requireNamespace("scholar", quietly = TRUE)) install.packages("scholar")
+```
+
 ```{r scholar-stats, include=FALSE}
 library(scholar)
 scholar_id <- "_zgKKS0AAAAJ"
