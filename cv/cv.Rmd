@@ -20,7 +20,7 @@ rdateformat: "`r format(Sys.time(), '%d %b %Y')`"
 keywords: R Markdown, academic CV, template
 
 header-includes:
-  # - \usepackage{xcolor}
+  - \PassOptionsToPackage{dvipsnames}{xcolor}
   # - \definecolor{txst}{HTML}{501214}
   
 fontfamily: mathpazo
