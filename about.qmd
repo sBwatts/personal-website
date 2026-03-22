@@ -7,34 +7,24 @@ page-layout: full
 ```{=html}
 <div class="page-hero-slim">
   <p class="hero-affiliation" style="margin-bottom:0.5rem;">About</p>
-  <h1 style="font-size:2.75rem;font-weight:800;letter-spacing:-0.04em;margin:0 0 0.5rem;">Seth B. Watts, PhD</h1>
+  <h1 style="font-size:2.75rem;font-weight:800;letter-spacing:-0.04em;margin:0 0 0.5rem;">Seth Watts, PhD</h1>
   <p style="color:var(--color-text-2);margin:0;">Assistant Professor of Criminal Justice &amp; Criminology at Texas State University.</p>
 </div>
 ```
 
-:::: {.about-grid}
-
-::: {.about-main}
-
+::::: about-grid
+::: about-main
 ## Research
 
 My work centers on policing, technological innovation, and public health — three domains that increasingly converge as law enforcement agencies adopt new tools and face growing demands for behavioral change.
 
-I study how emerging technologies reshape day-to-day police practice. A significant portion of my research examines **body-worn cameras**: how automated AI-assisted review changes supervisor behavior, officer accountability, and officer acceptance of monitoring systems. I use field experiments, quasi-experimental designs, and large-scale administrative records to identify causal mechanisms rather than correlations.
+I study how emerging technologies reshape day-to-day police practice. A significant portion of my research examines **body-worn cameras**: how automated AI-assisted review changes supervisor behavior, officer accountability, and officer acceptance of monitoring systems.
 
-A second thread of my research addresses **de-escalation training** — what it is, what works, and why. I use systematic reviews and meta-analytic methods alongside original evaluations to synthesize evidence across programs and jurisdictions. This line of work has direct policy relevance as departments face pressure to reduce use-of-force incidents and improve officer-community relationships.
+A second thread of my research addresses **de-escalation training** — what it is, what works, and why. This line of work has direct policy relevance as departments face pressure to reduce use-of-force incidents and improve officer-community relationships.
 
 My public health work examines **police responses to opioid overdoses and co-response models**, focusing on how structural arrangements between law enforcement and public health agencies shape outcomes for individuals in crisis.
 
----
-
-## Approach
-
-I work at the intersection of criminology, sociology, and public health — borrowing methods from each. My preferred designs involve randomized experiments, difference-in-differences, and regression discontinuity when possible. When the data demand it, I rely on survey methods and administrative record linkage. I use R and Stata for analysis.
-
-I am committed to open science practices: pre-registering studies, posting replication code, and sharing findings through policy briefs and practitioner engagement.
-
----
+------------------------------------------------------------------------
 
 ## Education
 
@@ -56,23 +46,18 @@ I am committed to open science practices: pre-registering studies, posting repli
 </div>
 ```
 
----
+------------------------------------------------------------------------
 
 ## Academic Positions
 
-**Assistant Professor**, School of Criminal Justice and Criminology
-Texas State University &middot; 2025 &ndash; present
+**Assistant Professor**, School of Criminal Justice and Criminology Texas State University · 2025 – present
 
-**Research Affiliate**, Texas Crime & Justice Center
-Texas State University &middot; 2025 &ndash; present
+**Research Affiliate**, Texas Crime & Justice Center Texas State University · 2025 – present
 
-**Postdoctoral Researcher**, Center for Violence Prevention & Community Safety
-Arizona State University &middot; 2024 &ndash; 2025
-
+**Postdoctoral Researcher**, Center for Violence Prevention & Community Safety Arizona State University · 2024 – 2025
 :::
 
-::: {.about-sidebar}
-
+::: about-sidebar
 ```{=html}
 <div class="contact-card">
   <h4>Contact &amp; Links</h4>
@@ -126,7 +111,5 @@ Arizona State University &middot; 2024 &ndash; 2025
   </a>
 </div>
 ```
-
 :::
-
-::::
+:::::
