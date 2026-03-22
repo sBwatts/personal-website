@@ -16,11 +16,56 @@ listing:
 date-format: "YYYY"
 ---
 
+```{r load-stats}
+#| echo: false
+#| message: false
+#| warning: false
+
+stats <- tryCatch(
+  yaml::read_yaml("data/scholar_stats.yml"),
+  error = function(e) list(
+    citations_all = "—",
+    h_index_all   = "—",
+    i10_index_all = "—"
+  )
+)
+
+pubs_n <- tryCatch({
+  nrow(read.csv("data/publications.csv"))
+}, error = function(e) "—")
+```
+
 <div class="page-hero-slim">
 
 <p class="hero-affiliation" style="margin-bottom: 0.5rem;">Research</p>
 <h1>Publications</h1>
 <p>Compiled automatically from <a href="https://openalex.org/" target="_blank">OpenAlex</a> via ORCID. Updated biweekly.</p>
+
+```{r stats-html}
+#| echo: false
+#| results: asis
+
+cat(paste0(
+'<div class="stats-row" style="margin-top:1.5rem;">',
+'<div class="stat-card">',
+'<span class="stat-number">', stats$citations_all, '</span>',
+'<span class="stat-label">Citations</span>',
+'</div>',
+'<div class="stat-card">',
+'<span class="stat-number">', stats$h_index_all, '</span>',
+'<span class="stat-label">h-index</span>',
+'</div>',
+'<div class="stat-card">',
+'<span class="stat-number">', stats$i10_index_all, '</span>',
+'<span class="stat-label">i10-index</span>',
+'</div>',
+'<div class="stat-card">',
+'<span class="stat-number">', pubs_n, '</span>',
+'<span class="stat-label">Publications</span>',
+'</div>',
+'</div>'
+))
+```
 
 </div>
 
