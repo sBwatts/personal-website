@@ -1,48 +1,116 @@
 ---
-title: "Seth Watts, PhD"
-subtitle: "Texas State University"
+title: ""
+pagetitle: "Seth Watts, PhD"
 page-layout: full
-image: "headshot.jpeg"
-
-about:
-  id: hero-heading
-  template: trestles
-  image-width: 65%
-  image-shape: round
 
 listing:
   - id: articles
-    contents: 
+    contents:
       - research/articles
-      # - posts/post-links.yml
     exclude:
       title: ""
     type: grid
     max-items: 3
-#   image-height: 150px
-    page-size: 3 
-    fields: [date, title, subtitle, author]
+    page-size: 3
+    fields: [date, title, subtitle]
     max-description-length: 75
-    sort: 
+    sort:
       - "date desc"
       - "title asc"
 ---
 
-::: {#hero-heading}
-### About me
+```{r load-stats}
+#| echo: false
+#| message: false
+#| warning: false
 
-I am an assistant professor at [Texas State University](https://www.txst.edu), studying policing, technological innovation, and responses to public health issues. My work examines how emerging tools or innovation approaches — from AI-assisted body-worn cameras to co-response models — shape police behavior and community outcomes.
+stats <- tryCatch(
+  yaml::read_yaml("data/scholar_stats.yml"),
+  error = function(e) list(
+    citations_all = "—",
+    h_index_all   = "—",
+    i10_index_all = "—"
+  )
+)
+
+pubs_n <- tryCatch({
+  nrow(read.csv("data/publications.csv"))
+}, error = function(e) "—")
+```
+
+:::: {.hero-section}
+
+::: {.hero-bio-col}
+
+```{=html}
+<p class="hero-affiliation">Assistant Professor &middot; Texas State University</p>
+<h1 class="hero-name">Seth B. Watts</h1>
+<p class="hero-tagline">Studying how technology and innovation shape policing, public safety, and community health.</p>
+<p class="hero-bio">I examine how emerging tools — from AI-assisted body-worn cameras to co-response models — reshape police behavior, officer decision-making, and community outcomes. My work sits at the intersection of criminology, public health, and applied policy evaluation.</p>
+```
 
 ::: {.research-chips}
-[Policing]{.chip} [Technology & AI]{.chip} [Body-Worn Cameras]{.chip} [De-escalation]{.chip} [Public Health]{.chip} 
-:::
+[Policing]{.chip} [Technology & AI]{.chip} [Body-Worn Cameras]{.chip} [De-escalation]{.chip} [Public Health]{.chip} [Program Evaluation]{.chip}
 :::
 
-### Recent activity
+```{r stats-html}
+#| echo: false
+#| results: asis
+
+cat(paste0(
+'<div class="stats-row">',
+'<div class="stat-card">',
+'<span class="stat-number">', stats$citations_all, '</span>',
+'<span class="stat-label">Citations</span>',
+'</div>',
+'<div class="stat-card">',
+'<span class="stat-number">', stats$h_index_all, '</span>',
+'<span class="stat-label">h-index</span>',
+'</div>',
+'<div class="stat-card">',
+'<span class="stat-number">', stats$i10_index_all, '</span>',
+'<span class="stat-label">i10-index</span>',
+'</div>',
+'<div class="stat-card">',
+'<span class="stat-number">', pubs_n, '</span>',
+'<span class="stat-label">Publications</span>',
+'</div>',
+'</div>'
+))
+```
+
+```{=html}
+<div class="hero-cta">
+  <a href="research.html" class="btn-primary-custom">
+    <i class="bi bi-journal-text"></i> Publications
+  </a>
+  <a href="cv/cv.pdf" class="btn-outline-custom" target="_blank">
+    <i class="bi bi-file-earmark-person"></i> Download CV
+  </a>
+  <a href="mailto:sbwatts@txstate.edu" class="btn-outline-custom">
+    <i class="bi bi-envelope"></i> Contact
+  </a>
+</div>
+```
+
+:::
+
+::: {.hero-photo}
+```{=html}
+<img src="headshot.jpeg" alt="Seth Watts" class="hero-headshot">
+```
+:::
+
+::::
+
+```{=html}
+<hr class="section-divider">
+```
+
+::: {.section-heading-row}
+## Recent Work {.section-heading}
+[All publications &rarr;](research.qmd){.section-link}
+:::
 
 ::: {#articles}
-:::
-
-::: {style="text-align: right;"}
-[All publications »](research.qmd)
 :::

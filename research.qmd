@@ -1,36 +1,28 @@
 ---
 title: ""
-listing:
-    - id: articles
-      contents: "articles/*/index.qmd"
-      sort: "date desc"
-      type: grid
-      # categories: cloud
-      page-size: 100
-      sort-ui: true
-      feed: true
-      filter-ui: true
-      table-hover: false
-      fields: [date, title, subtitle]
-#   # - id: working-papers
-#   #   contents: "working/*/index.qmd"
-#   #   sort: "date desc"
-#   #   type: default
-#   #   categories: false
-#   #   sort-ui: false
-#   #   # filter-ui: false
-#   #   # table-hover: true
-#   #   fields: [title]
-#
-date-format: "YYYY"
+pagetitle: "Publications — Seth Watts"
 page-layout: full
-# title-block-banner: true
-css: styles.css
+
+listing:
+  - id: articles
+    contents: "articles/*/index.qmd"
+    sort: "date desc"
+    type: grid
+    page-size: 100
+    sort-ui: true
+    filter-ui: true
+    fields: [date, title, subtitle]
+
+date-format: "YYYY"
 ---
 
-## Publications
+<div class="page-hero-slim">
 
-Compiled using an automated script pulling from [OpenAlex](https://openalex.org/).
+<p class="hero-affiliation" style="margin-bottom: 0.5rem;">Research</p>
+<h1>Publications</h1>
+<p>Compiled automatically from <a href="https://openalex.org/" target="_blank">OpenAlex</a> via ORCID. Updated biweekly.</p>
+
+</div>
 
 ::: {#articles}
 :::
