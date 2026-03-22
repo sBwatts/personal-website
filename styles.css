@@ -401,17 +401,33 @@ h4 { font-size: 1.25rem; }
   padding: 1.375rem 1.375rem 1.25rem;
 }
 
+/* Stack author above date in attribution row */
+.quarto-listing .card-attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+}
+
+.quarto-listing .listing-author {
+  font-size: 0.72rem;
+  color: var(--color-text-2);
+  font-weight: 400;
+  line-height: 1.35;
+  font-style: italic;
+}
+
 .quarto-listing .listing-date {
   display: inline-block;
   font-family: var(--font-mono);
   background: var(--color-accent-light);
   color: var(--color-accent);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   padding: 0.2rem 0.6rem;
   border-radius: 0.25rem;
-  margin-bottom: 0.5rem;
 }
 
 .quarto-listing .card-subtitle,
@@ -794,6 +810,10 @@ blockquote {
 
 [data-theme="dark"] .quarto-listing .card-title a:hover {
   color: #60a5fa !important;
+}
+
+[data-theme="dark"] .quarto-listing .listing-author {
+  color: #8b949e;
 }
 
 [data-theme="dark"] .quarto-listing .listing-date {

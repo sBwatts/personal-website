@@ -12,25 +12,22 @@ listing:
     type: grid
     max-items: 3
     page-size: 3
-    fields: [date, title, subtitle]
+    fields: [date, title, subtitle, author]
     max-description-length: 75
     sort:
       - "date desc"
       - "title asc"
 ---
 
-:::: {.hero-section}
-
-::: {.hero-bio-col}
-
+:::::: hero-section
+:::: hero-bio-col
 ```{=html}
 <p class="hero-affiliation">Assistant Professor &middot; Texas State University</p>
-<h1 class="hero-name">Seth B. Watts</h1>
-<p class="hero-tagline">Studying how technology and innovation shape policing, public safety, and community health.</p>
+<h1 class="hero-name">Seth Watts</h1>
 <p class="hero-bio">I examine how emerging tools — from AI-assisted body-worn cameras to co-response models — reshape police behavior, officer decision-making, and community outcomes. My work sits at the intersection of criminology, public health, and applied policy evaluation.</p>
 ```
 
-::: {.research-chips}
+::: research-chips
 [Policing]{.chip} [Technology & AI]{.chip} [Body-Worn Cameras]{.chip} [De-escalation]{.chip} [Public Health]{.chip} [Program Evaluation]{.chip}
 :::
 
@@ -47,24 +44,19 @@ listing:
   </a>
 </div>
 ```
-
-:::
-
-::: {.hero-photo}
-```{=html}
-<img src="headshot.jpeg" alt="Seth Watts" class="hero-headshot">
-```
-:::
-
 ::::
 
-```{=html}
-<hr class="section-divider">
-```
+::: hero-photo
+<img src="headshot.jpeg" alt="Seth Watts" class="hero-headshot"/>
+:::
+::::::
 
-::: {.section-heading-row}
+<hr class="section-divider">
+
+::: section-heading-row
 ## Recent Work {.section-heading}
-[All publications &rarr;](research.qmd){.section-link}
+
+[All publications →](research.qmd){.section-link}
 :::
 
 ::: {#articles}

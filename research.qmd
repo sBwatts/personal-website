@@ -11,7 +11,7 @@ listing:
     page-size: 100
     sort-ui: true
     filter-ui: true
-    fields: [date, title, subtitle]
+    fields: [date, title, subtitle, author]
 
 date-format: "YYYY"
 ---
