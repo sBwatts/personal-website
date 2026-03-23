@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/research.html",
+    "listing": "/index.html",
     "items": [
       "/research/articles/a-comparative-review-of-de-escalation-training-what-works-and-why/index.html",
       "/research/articles/ai-in-policing-capturing-police-performance-good-and-bad-in-routine-rare-and-nov/index.html",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/research.html",
     "items": [
       "/research/articles/a-comparative-review-of-de-escalation-training-what-works-and-why/index.html",
       "/research/articles/ai-in-policing-capturing-police-performance-good-and-bad-in-routine-rare-and-nov/index.html",

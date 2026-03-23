@@ -19,7 +19,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-b487cddad83ce73ad93f1328ce7d9f7a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-cde3a04974b0efabc9f901e3531e6bf5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,20 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
-<link rel="stylesheet" href="../../../styles.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <!-- Dark Mode Toggle -->
 <style>
   .theme-toggle {
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 2rem;
     padding: 0.35rem 0.75rem;
     cursor: pointer;
-    transition: background 0.2s ease, border-color 0.2s ease;
-    color: #ffffff;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    color: #1e293b;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -93,8 +92,8 @@ ul.task-list li input[type="checkbox"] {
   }
 
   .theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.22);
-    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 0, 0, 0.25);
   }
 
   .theme-toggle i {
@@ -154,6 +153,8 @@ ul.task-list li input[type="checkbox"] {
   })();
 </script>
 
+
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -172,32 +173,36 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html">
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
-  </li>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Research</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
         <li>
     <a class="dropdown-item" href="../../../research.html">
  <span class="dropdown-text">Publications</span></a>
-  </li>
+  </li>  
         <li>
     <a class="dropdown-item" href="../../../cv/cv.pdf">
  <span class="dropdown-text">CV</span></a>
-  </li>
+  </li>  
     </ul>
   </li>
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-<a href="https://github.com/sBwatts" class="quarto-navigation-tool px-1" target="_blank" aria-label="GitHub"><i class="bi bi-github" role="img" aria-label="GitHub"></i></a>
-<a href="https://x.com/SethBWatts" class="quarto-navigation-tool px-1" target="_blank" aria-label="X / Twitter"><i class="bi bi-twitter-x" role="img" aria-label="X / Twitter"></i></a>
-<a href="https://www.linkedin.com/in/sethwatts1/" class="quarto-navigation-tool px-1" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin" role="img" aria-label="LinkedIn"></i></a>
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://github.com/sBwatts" title="" class="quarto-navigation-tool px-1" aria-label="" target="_blank"><i class="bi bi-github"></i></a>
+    <a href="https://x.com/SethBWatts" title="" class="quarto-navigation-tool px-1" aria-label="" target="_blank"><i class="bi bi-twitter-x"></i></a>
+    <a href="https://www.linkedin.com/in/sethwatts1/" title="" class="quarto-navigation-tool px-1" aria-label="" target="_blank"><i class="bi bi-linkedin"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -209,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
-
+   
   <ul>
   <li><a href="#publication-details" id="toc-publication-details" class="nav-link active" data-scroll-target="#publication-details">Publication Details</a></li>
   <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
@@ -235,15 +240,15 @@ ul.task-list li input[type="checkbox"] {
              <p>Seth Watts, Carlena Orosco, Michael D. White </p>
           </div>
   </div>
-
+    
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
       <p class="date">February 16, 2026</p>
     </div>
   </div>
-
-
+  
+    
     <div>
     <div class="quarto-title-meta-heading">Doi</div>
     <div class="quarto-title-meta-contents">
@@ -253,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
   </div>
-
+  
 
 
 </header>
@@ -287,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
+    const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
       placement: 'right',
@@ -296,7 +301,7 @@ ul.task-list li input[type="checkbox"] {
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {
+        if (clz.startsWith('code-annotation-')) {                     
           return true;
         }
       }
@@ -316,11 +321,11 @@ ul.task-list li input[type="checkbox"] {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button,
-          { trigger: "manual",
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();
+        tooltip.show();    
       }
       setTimeout(function() {
         if (tooltip) {
@@ -401,7 +406,7 @@ ul.task-list li input[type="checkbox"] {
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config);
+      window.tippy(el, config); 
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -476,7 +481,7 @@ ul.task-list li input[type="checkbox"] {
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined;
+        let hash = undefined; 
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -504,7 +509,7 @@ ul.task-list li input[type="checkbox"] {
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              }
+              } 
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -528,7 +533,7 @@ ul.task-list li input[type="checkbox"] {
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            }
+            } 
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -568,7 +573,7 @@ ul.task-list li input[type="checkbox"] {
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it
+              // cook up a div (if necessary) and position it 
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -694,7 +699,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
-    </div>
+    </div>   
     <div class="nav-footer-center">
 Seth Watts ©
 <script>document.write(new Date().getFullYear())</script>
@@ -704,21 +709,21 @@ Seth Watts ©
     <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/sBwatts" target="_blank">
       <i class="bi bi-github" role="img">
-</i>
+</i> 
     </a>
-  </li>
+  </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/sethwatts1/" target="_blank">
       <i class="bi bi-linkedin" role="img">
-</i>
+</i> 
     </a>
-  </li>
+  </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="mailto:sbwatts@txstate.edu">
       <i class="bi bi-envelope" role="img">
-</i>
+</i> 
     </a>
-  </li>
+  </li>  
 </ul>
     </div>
   </div>
