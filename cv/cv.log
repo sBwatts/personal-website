@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.1.28)  23 MAR 2026 07:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.1.28)  23 MAR 2026 07:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -758,21 +758,21 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: A703509134FFF093DD86803A54EA32FC;3088.
+(rerunfilecheck)             Checksum: 49930CF6BCF1C81B9C98EF631C465980;2928.
  ) 
 Here is how much of TeX's memory you used:
- 26619 strings out of 469514
- 483677 string characters out of 5469114
- 905148 words of memory out of 5000000
- 54411 multiletter control sequences out of 15000+600000
- 696630 words of font info for 358 fonts, out of 8000000 for 9000
+ 26626 strings out of 469514
+ 483726 string characters out of 5469114
+ 905104 words of memory out of 5000000
+ 54409 multiletter control sequences out of 15000+600000
+ 697197 words of font info for 366 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  117i,12n,140p,1014b,558s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/wkg28/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on cv.pdf (6 pages, 128532 bytes).
+Output written on cv.pdf (6 pages, 128363 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 210 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
- 80053 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 243 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 80045 words of extra memory for PDF output out of 89155 (max. 10000000)
 
