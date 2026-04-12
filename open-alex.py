@@ -1,16 +1,22 @@
 import requests
-from pathlib import Path
-import yaml
-from datetime import datetime
-import time
+import csv
 import re
+import time
+from pathlib import Path
+from datetime import datetime
+
+try:
+    import yaml
+except ImportError:
+    yaml = None
+
 
 class OpenAlexArticleSync:
-    def __init__(self, articles_dir="research/articles"):
+    def __init__(self, bibtex_path="_bibliography/papers.bib"):
         self.base_url = "https://api.openalex.org"
-        self.articles_dir = Path(articles_dir)
-        self.articles_dir.mkdir(parents=True, exist_ok=True)
-        
+        self.bibtex_path = Path(bibtex_path)
+        self.bibtex_path.parent.mkdir(parents=True, exist_ok=True)
+
     def fetch_author_works(self, author_name=None, orcid=None, limit=50):
         """Fetch works by author from OpenAlex"""
         if orcid:
@@ -31,285 +37,326 @@ class OpenAlexArticleSync:
             }
         else:
             raise ValueError("Must provide either author_name or orcid")
-        
+
         print(f"Fetching works from OpenAlex...")
         response = requests.get(url, params=params)
         response.raise_for_status()
-        
+
         data = response.json()
         works = data.get('results', [])
-        
+
         print(f"Found {len(works)} works")
         return self._parse_works(works)
-    
+
     def fetch_by_doi(self, doi):
         """Fetch a specific work by DOI"""
         url = f"{self.base_url}/works/doi:{doi}"
         response = requests.get(url, params={'mailto': 'sbwatts@txstate.edu'})
         response.raise_for_status()
-        
+
         work = response.json()
         return self._parse_works([work])[0]
-    
+
     def _parse_works(self, works):
         """Parse OpenAlex works into article format, preferring published versions"""
         works_by_title = {}
-        
+
         for work in works:
             title = work.get('title', 'Untitled')
             normalized_title = re.sub(r'[^\w\s]', '', title.lower()).strip()
-            
+
             if normalized_title not in works_by_title:
                 works_by_title[normalized_title] = []
             works_by_title[normalized_title].append(work)
-        
+
         selected_works = []
         for normalized_title, work_group in works_by_title.items():
             if len(work_group) == 1:
                 selected_works.append(work_group[0])
             else:
-                print(f"  ⚠ Found {len(work_group)} versions of: {work_group[0].get('title', '')[:50]}...")
-                
+                print(f"  Found {len(work_group)} versions of: {work_group[0].get('title', '')[:50]}...")
+
                 best_work = work_group[0]
                 for work in work_group:
                     work_type = work.get('type', '')
                     best_type = best_work.get('type', '')
-                    
+
                     if work_type == 'article' and best_type != 'article':
                         best_work = work
-                        print(f"    → Selecting journal version")
+                        print(f"    -> Selecting journal version")
                     elif work_type == best_type and work.get('doi') and not best_work.get('doi'):
                         best_work = work
                     elif work_type == best_type and work.get('cited_by_count', 0) > best_work.get('cited_by_count', 0):
                         best_work = work
-                
+
                 selected_works.append(best_work)
-        
+
         articles = []
         for work in selected_works:
-            authors = []
+            # Collect ALL authors for BibTeX
+            all_authors = []
             if work.get('authorships'):
-                authors = [a['author']['display_name'] for a in work['authorships'][:3]]
-            author_str = ', '.join(authors)
-            if len(work.get('authorships', [])) > 3:
-                author_str += ' et al.'
-            
+                all_authors = [a['author']['display_name'] for a in work['authorships']]
+
+            # Truncated version for CSV (first 3 + et al.)
+            author_str_trunc = ', '.join(all_authors[:3])
+            if len(all_authors) > 3:
+                author_str_trunc += ' et al.'
+
             pub_date = work.get('publication_date', '')
             if not pub_date:
                 pub_year = work.get('publication_year')
                 pub_date = f"{pub_year}-01-01" if pub_year else datetime.now().strftime('%Y-%m-%d')
-            
+
             title = work.get('title', 'Untitled')
-            slug = self._create_slug(title, work.get('id', '').split('/')[-1])
-            
-            categories = []
-            if work.get('concepts'):
-                categories = [c['display_name'] for c in work['concepts'][:5] if c.get('score', 0) > 0.3]
-            
-            abstract = work.get('abstract', '')
-            if not abstract and work.get('abstract_inverted_index'):
-                abstract = self._reconstruct_abstract(work['abstract_inverted_index'])
-            
+
             cited_by_count = work.get('cited_by_count', 0)
             if cited_by_count is None:
                 cited_by_count = 0
-            
+
             print(f"  Citations for '{title[:40]}...': {cited_by_count}")
-            
+
+            source = (work.get('primary_location', {}) or {}).get('source', {}) or {}
+            venue = source.get('display_name', '') or ''
+            venue = venue.rstrip(' :').strip()
+            publisher = source.get('host_organization_name', '') or ''
+
+            # Extract PMID if available
+            pmid = ''
+            ids = work.get('ids', {})
+            if isinstance(ids, dict) and 'pmid' in ids:
+                pmid = ids['pmid']
+
             article = {
-                'slug': slug,
                 'title': title,
-                'author': author_str,
+                'author': author_str_trunc,
+                'all_authors': all_authors,
+                'author_count': len(all_authors),
                 'date': pub_date,
-                # 'description': abstract[:500] if abstract else 'No abstract available.',
-                # 'categories': categories,
+                'year': int(pub_date[:4]) if pub_date else None,
                 'doi': work.get('doi', '').replace('https://doi.org/', ''),
-                'url': work.get('doi', ''),
+                'doi_url': work.get('doi', ''),
                 'open_access': work.get('open_access', {}).get('is_oa', False),
-                'pdf_url': work.get('open_access', {}).get('oa_url', ''),
+                'pdf_url': work.get('open_access', {}).get('oa_url', '') or '',
                 'cited_by_count': cited_by_count,
-                'publication_venue': (work.get('primary_location', {}).get('source', {}).get('display_name', '') or '').rstrip(' :').strip(),
+                'publication_venue': venue,
+                'publisher': publisher,
                 'openalex_id': work.get('id', ''),
                 'work_type': work.get('type', ''),
+                'pmid': pmid,
             }
-            
+
             articles.append(article)
-        
+
         return articles
-    
-    def _create_slug(self, title, fallback_id):
-        """Create URL-friendly slug from title"""
-        slug = title.lower()
-        slug = re.sub(r'[^\w\s-]', '', slug)
-        slug = re.sub(r'[-\s]+', '-', slug)
-        slug = slug[:80]
-        return slug if slug else fallback_id
-    
-    def _reconstruct_abstract(self, inverted_index):
-        """Reconstruct abstract from inverted index"""
-        if not inverted_index:
+
+    def _convert_authors_to_bibtex(self, all_authors):
+        """Convert 'First Last' author list to BibTeX 'Last, First and Last, First' format"""
+        bibtex_authors = []
+        for name in all_authors:
+            parts = name.strip().split()
+            if len(parts) == 0:
+                continue
+            elif len(parts) == 1:
+                bibtex_authors.append(parts[0])
+            else:
+                last = parts[-1]
+                first_middle = ' '.join(parts[:-1])
+                bibtex_authors.append(f"{last}, {first_middle}")
+        return ' and '.join(bibtex_authors)
+
+    def _make_citekey(self, article):
+        """Generate a BibTeX citekey: firstauthorlastname + year + firsttitleword"""
+        all_authors = article.get('all_authors', [])
+        if all_authors:
+            first_author = all_authors[0].strip().split()
+            last_name = first_author[-1].lower() if first_author else 'unknown'
+        else:
+            last_name = 'unknown'
+
+        year = str(article.get('year', '0000'))
+
+        title = article.get('title', '')
+        skip_words = {'a', 'an', 'the', 'of', 'in', 'on', 'at', 'for', 'and', 'or'}
+        words = re.sub(r'[^\w\s]', '', title.lower()).split()
+        first_word = next((w for w in words if w not in skip_words), words[0] if words else 'untitled')
+
+        last_name = re.sub(r'[^a-z0-9]', '', last_name)
+        first_word = re.sub(r'[^a-z0-9]', '', first_word)
+
+        return f"{last_name}{year}{first_word}"
+
+    def _escape_bibtex(self, text):
+        """Escape special characters for BibTeX"""
+        if not text:
+            return text
+        text = text.replace('&', r'\&')
+        text = text.replace('%', r'\%')
+        text = text.replace('$', r'\$')
+        text = text.replace('#', r'\#')
+        return text
+
+    def _journal_abbr(self, journal):
+        """Create a journal abbreviation from the first letters of significant words"""
+        if not journal:
             return ''
-        
-        words_positions = []
-        for word, positions in inverted_index.items():
-            for pos in positions:
-                words_positions.append((pos, word))
-        
-        words_positions.sort()
-        return ' '.join([word for _, word in words_positions])
-    
-    def create_article_index(self, article):
-        """Create index.qmd for an article"""
-        slug = article['slug']
-        article_path = self.articles_dir / slug
-        article_path.mkdir(parents=True, exist_ok=True)
-        
-        is_preprint = False
+        skip = {'a', 'an', 'the', 'of', 'in', 'on', 'at', 'for', 'and', 'or'}
+        words = journal.split()
+        abbr = ''.join(w[0].upper() for w in words if w.lower().rstrip(':') not in skip and w.replace(':', '').isalpha())
+        return abbr if abbr else journal[:6]
+
+    def create_bibtex_entry(self, article):
+        """Convert a parsed article dict to a BibTeX entry string"""
         work_type = article.get('work_type', '').lower()
-        venue = article.get('publication_venue', '').lower()
-        
-        if work_type == 'posted-content' or 'crimrxiv' in venue or 'arxiv' in venue or 'preprint' in venue:
-            is_preprint = True
-        
-        yaml_data = {
-            'title': article['title'],
-            'author': article['author'],
-            'date': article['date'],
-        }
+        venue = article.get('publication_venue', '')
+        venue_lower = venue.lower()
 
-        if article.get('publication_venue'):
-            yaml_data['subtitle'] = article['publication_venue']
+        is_preprint = (
+            work_type in ('posted-content', 'preprint') or
+            'crimrxiv' in venue_lower or
+            'arxiv' in venue_lower or
+            'preprint' in venue_lower
+        )
 
-        if article.get('description') and article['description'] != 'No abstract available.':
-            yaml_data['description'] = article['description']
-        
-        # if article.get('categories'):
-        #     categories = article['categories'].copy() if article['categories'] else []
-        #     if is_preprint and 'Preprint' not in categories:
-        #         categories.insert(0, 'Preprint')
-        #     yaml_data['categories'] = categories
-        # elif is_preprint:
-        #     yaml_data['categories'] = ['Preprint']
-        
-        if article.get('doi'):
-            yaml_data['doi'] = article['doi']
-        
-        if article.get('url'):
-            yaml_data['citation-url'] = article['url']
-        
-        yaml_data['format'] = {
-            'html': {
-                'toc': True
-            }
-        }
-        
-        content_parts = []
-        
-        if is_preprint:
-            content_parts.append("""
-::: {.callout-warning}
-## 🔬 Preprint
-This is a preprint that has not undergone peer review. Findings should be interpreted with caution.
-:::
-""")
-        
-        pub_info = []
-        if article.get('publication_venue'):
-            venue_text = f"**Published in:** {article['publication_venue']}"
-            # if is_preprint:
-            #     venue_text += " *(Preprint Server)*"
-            pub_info.append(venue_text)
-        
-        citation_count = article.get('cited_by_count', 0)
-        if citation_count and citation_count > 0:
-            pub_info.append(f"**Citations:** {citation_count}")
-        
-        if article.get('open_access'):
-            pub_info.append(f"**Open Access:** Yes")
-        
-        if pub_info:
-            content_parts.append("## Publication Details\n\n" + '\n\n'.join(pub_info) + "\n")
-        
-        links = []
-        if article.get('url'):
-            links.append(f"[DOI Link]({article['url']})")
-        if article.get('pdf_url'):
-            links.append(f"[PDF]({article['pdf_url']})")
-        if article.get('openalex_id'):
-            links.append(f"[OpenAlex]({article['openalex_id']})")
-        
-        if links:
-            content_parts.append("## Links\n\n" + ' | '.join(links) + "\n")
-        
-        content_body = '\n'.join(content_parts)
-        
-        yaml_str = yaml.dump(
-            yaml_data, 
-            default_flow_style=False,
-            allow_unicode=True,
-            sort_keys=False,
-            width=float('inf')
-        ).strip()
-        
-        index_content = f"---\n{yaml_str}\n---\n\n{content_body}"
+        entry_type = 'misc' if is_preprint else 'article'
+        citekey = self._make_citekey(article)
 
-        index_file = article_path / 'index.qmd'
-        if index_file.exists() and index_file.read_text(encoding='utf-8') == index_content:
-            print(f"- Unchanged: {slug}")
-            return article_path
+        author_bibtex = self._convert_authors_to_bibtex(article.get('all_authors', []))
+        title_escaped = self._escape_bibtex(article.get('title', ''))
+        year = article.get('year', '')
+        doi = article.get('doi', '')
+        doi_url = article.get('doi_url', '') or (f"https://doi.org/{doi}" if doi else '')
+        pdf_url = article.get('pdf_url', '')
+        abbr = self._journal_abbr(venue) if venue else ''
 
-        with open(index_file, 'w', encoding='utf-8') as f:
-            f.write(index_content)
+        fields = []
+        fields.append(f"  title     = {{{title_escaped}}}")
+        fields.append(f"  author    = {{{author_bibtex}}}")
 
-        print(f"✓ Created: {slug}{' 🔬' if is_preprint else ''}")
-        return article_path
-    
-    def sync_author_works(self, author_name=None, orcid=None, limit=50):
-        """Sync all works by an author"""
-        articles = self.fetch_author_works(author_name=author_name, orcid=orcid, limit=limit)
-        
-        created = []
+        if entry_type == 'article':
+            venue_escaped = self._escape_bibtex(venue)
+            fields.append(f"  journal   = {{{venue_escaped}}}")
+        else:
+            fields.append(f"  note      = {{Preprint}}")
+
+        fields.append(f"  year      = {{{year}}}")
+
+        if doi:
+            fields.append(f"  doi       = {{{doi}}}")
+        if doi_url:
+            fields.append(f"  url       = {{{doi_url}}}")
+        if pdf_url:
+            fields.append(f"  pdf       = {{{pdf_url}}}")
+        if abbr:
+            fields.append(f"  abbr      = {{{abbr}}}")
+
+        fields.append(f"  selected  = {{false}}")
+
+        fields_str = ',\n'.join(fields)
+        return f"@{entry_type}{{{citekey},\n{fields_str}\n}}"
+
+    def sync_bibtex(self, articles, output_path=None):
+        """Write all articles as BibTeX entries to papers.bib"""
+        if output_path is None:
+            output_path = self.bibtex_path
+
+        entries = []
+        seen_keys = {}
         for article in articles:
-            try:
-                path = self.create_article_index(article)
-                created.append(path)
-                time.sleep(0.1)
-            except Exception as e:
-                print(f"✗ Error creating {article.get('slug')}: {e}")
-        
-        print(f"\n✓ Synced {len(created)}/{len(articles)} articles successfully!")
-        return created
+            entry = self.create_bibtex_entry(article)
+            key_match = re.match(r'@\w+\{(\w+),', entry)
+            citekey = key_match.group(1) if key_match else 'unknown'
+
+            if citekey in seen_keys:
+                seen_keys[citekey] += 1
+                suffix = seen_keys[citekey]
+                new_key = f"{citekey}_{suffix}"
+                entry = re.sub(r'(@\w+\{)\w+,', rf'\g<1>{new_key},', entry, count=1)
+            else:
+                seen_keys[citekey] = 0
+
+            entries.append(entry)
+
+        bib_content = '\n\n'.join(entries) + '\n'
+
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(bib_content)
+
+        print(f"Wrote {len(entries)} BibTeX entries to {output_path}")
+
+    def sync_csv(self, articles, output_path='data/publications.csv'):
+        """Write all articles to a CSV file (for backwards compatibility)"""
+        Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+        fieldnames = [
+            'title', 'authors', 'author_count', 'year', 'publication_date',
+            'journal', 'publisher', 'type', 'is_oa', 'doi', 'doi_url',
+            'pdf_url', 'openalex_id', 'pmid', 'cited_by_count'
+        ]
+
+        with open(output_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for a in articles:
+                writer.writerow({
+                    'title': a.get('title', ''),
+                    'authors': a.get('author', ''),
+                    'author_count': a.get('author_count', ''),
+                    'year': a.get('year', ''),
+                    'publication_date': a.get('date', ''),
+                    'journal': a.get('publication_venue', ''),
+                    'publisher': a.get('publisher', ''),
+                    'type': a.get('work_type', ''),
+                    'is_oa': a.get('open_access', False),
+                    'doi': a.get('doi_url', ''),
+                    'doi_url': a.get('doi_url', ''),
+                    'pdf_url': a.get('pdf_url', ''),
+                    'openalex_id': a.get('openalex_id', ''),
+                    'pmid': a.get('pmid', ''),
+                    'cited_by_count': a.get('cited_by_count', 0),
+                })
+
+        print(f"Wrote {len(articles)} entries to {output_path}")
+
+    def sync_author_works(self, author_name=None, orcid=None, limit=50):
+        """Sync all works: fetch from OpenAlex, write BibTeX and CSV"""
+        articles = self.fetch_author_works(author_name=author_name, orcid=orcid, limit=limit)
+
+        self.sync_bibtex(articles)
+        self.sync_csv(articles)
+
+        print(f"\nSync complete: {len(articles)} publications processed.")
+        return articles
 
 
 class FilteredOpenAlexSync(OpenAlexArticleSync):
     """Extended version with filtering options"""
-    
-    def fetch_author_works(self, author_name=None, orcid=None, limit=50, 
+
+    def fetch_author_works(self, author_name=None, orcid=None, limit=50,
                           min_citations=None, publication_year_from=None,
                           only_open_access=False, exclude_types=None):
         """Fetch works with advanced filtering"""
         filters = []
-        
+
         if orcid:
             filters.append(f'author.orcid:{orcid}')
         elif author_name:
             filters.append(f'author.search:{author_name}')
         else:
             raise ValueError("Must provide either author_name or orcid")
-        
+
         if min_citations:
             filters.append(f'cited_by_count:>{min_citations}')
-        
+
         if publication_year_from:
             filters.append(f'publication_year:>{publication_year_from}')
-        
+
         if only_open_access:
             filters.append('is_oa:true')
-        
+
         if exclude_types:
             for t in exclude_types:
                 filters.append(f'type:!{t}')
-        
+
         url = f"{self.base_url}/works"
         params = {
             'filter': ','.join(filters),
@@ -317,18 +364,18 @@ class FilteredOpenAlexSync(OpenAlexArticleSync):
             'sort': 'publication_date:desc',
             'mailto': 'sbwatts@txstate.edu'
         }
-        
+
         print(f"Fetching works with filters: {filters}")
         response = requests.get(url, params=params)
         response.raise_for_status()
-        
+
         works = response.json().get('results', [])
         print(f"Found {len(works)} works")
         return self._parse_works(works)
 
 
 if __name__ == "__main__":
-    syncer = FilteredOpenAlexSync("research/articles")
+    syncer = FilteredOpenAlexSync()
     syncer.sync_author_works(
         orcid="0000-0002-5108-9055",
         limit=50
