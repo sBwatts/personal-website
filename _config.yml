@@ -260,4 +260,4 @@ repo_trophies:
 # Remote theme
 # -----------------------------------------------------------------------------
 
-remote_theme: alshedivat/al-folio
+remote_theme: alshedivat/al-folio@v0.16.3
