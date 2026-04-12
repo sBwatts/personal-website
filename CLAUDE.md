@@ -4,51 +4,70 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Quarto-based static academic website for Seth Watts (Assistant Professor, Texas State University), deployed via GitHub Pages to https://www.sethbwatts.com. Output renders to `docs/`.
+Jekyll-based static academic website for Seth Watts (Assistant Professor, Texas State University), built with the [al-folio](https://github.com/alshedivat/al-folio) theme and deployed via GitHub Actions to https://www.sethbwatts.com.
 
 ## Commands
 
 ```bash
+# Install Ruby dependencies
+bundle install
+
 # Preview locally with live reload
-quarto preview
+bundle exec jekyll serve
 
-# Full build (renders to docs/)
-quarto render
+# Full build (renders to _site/)
+bundle exec jekyll build
 ```
-
-Pre-render scripts in `_quarto.yml` run automatically before every render:
-1. `Rscript cv/cv_render.R` — compiles `cv/cv.Rmd` to `cv/cv.pdf` via R/TinyTeX
-2. `Rscript call-python.R` — calls `open-alex.py` via reticulate to sync publications from OpenAlex API
 
 ## Architecture
 
 ### Publication Pipeline
 
-`open-alex.py` fetches publications from the OpenAlex API using ORCID `0000-0002-5108-9055`, writes data to `data/publications.csv` and `data/publications.rds`, and generates individual `.qmd` files in `research/articles/`. These are picked up automatically by Quarto. `research.qmd` lists all articles; `index.qmd` shows the latest 3.
+`open-alex.py` fetches publications from the OpenAlex API using ORCID `0000-0002-5108-9055`, writes data to:
+- `_bibliography/papers.bib` — BibTeX file used by jekyll-scholar to render the publications page
+- `data/publications.csv` — cached CSV for reference
 
-`call-python.R` is the R wrapper that invokes `open-alex.py` via reticulate. The GitHub Actions workflow (`.github/workflows/update-publications.yml`) runs this pipeline automatically on the 1st and 15th of each month, then commits and pushes any changes.
+The GitHub Actions workflow (`.github/workflows/update-publications.yml`) runs `python open-alex.py` automatically on the 1st and 15th of each month, then commits and pushes any changes.
 
 ### CV Pipeline
 
-`cv/cv.Rmd` is the CV source (R Markdown using `stevetemplates`). `cv/cv_render.R` renders it to `cv/cv.pdf`, which is included as a resource in the final site. The `cv/` directory is excluded from Quarto's `.qmd` rendering (`!cv/**` in `_quarto.yml`).
+`cv/cv.Rmd` is the CV source (R Markdown using `stevetemplates`). To update the CV:
+1. Edit `cv/cv.Rmd`
+2. Run `Rscript cv/cv_render.R` to produce `cv/cv.pdf`
+3. Copy to `assets/pdf/cv.pdf`
+4. Commit and push both files
 
 ### Key Files
 
 | File | Purpose |
 |------|---------|
-| `_quarto.yml` | Project config: navbar, pre-render hooks, output dir, resources |
-| `styles.css` | Custom CSS with variables for colors/typography (Inter, JetBrains Mono) |
-| `open-alex.py` | Fetches publications from OpenAlex; generates `research/articles/*.qmd` |
-| `cv/cv.Rmd` | CV source document |
-| `research/articles/` | Auto-generated — do not edit manually |
-| `docs/` | Rendered site — do not edit manually |
+| `_config.yml` | Jekyll + al-folio config: social links, scholar settings, theme |
+| `Gemfile` | Ruby dependencies |
+| `_pages/about.md` | Home page with bio, education, positions |
+| `_pages/publications.md` | Publications page (rendered from `papers.bib` via jekyll-scholar) |
+| `_pages/cv.md` | CV page (links to `assets/pdf/cv.pdf`) |
+| `_bibliography/papers.bib` | BibTeX publication list — auto-updated by `open-alex.py` |
+| `assets/img/prof_pic.jpg` | Profile photo |
+| `assets/pdf/cv.pdf` | CV PDF (manually updated) |
+| `open-alex.py` | Fetches publications from OpenAlex; generates `papers.bib` + CSV |
 
 ### Dependencies
 
-- **Quarto** for rendering
-- **Python**: `requests`, `pyyaml` (see `requirements.txt`)
-- **R**: `rmarkdown`, `reticulate`, `stevetemplates`
-- **TinyTeX/LaTeX** for CV PDF generation
+- **Ruby** 3.2+ with Bundler
+- **Jekyll** 4.3 with al-folio remote theme
+- **jekyll-scholar** for BibTeX rendering
+- **Python**: `requests`, `pyyaml` (for publication sync)
+- **R + TinyTeX**: only needed for CV PDF generation (not for site build)
+
+## Deployment
+
+The site deploys automatically via GitHub Actions:
+- `.github/workflows/deploy.yml` — builds the Jekyll site and deploys to GitHub Pages on every push to `main`
+- No manual build step needed — push to `main` and the site updates
+
+### GitHub Pages Settings
+
+In repository Settings > Pages, the source must be set to **GitHub Actions** (not "Deploy from a branch").
 
 ## Git Workflow
 
@@ -60,21 +79,16 @@ All changes to this repository must be committed and pushed to GitHub with clear
 - Keep the first line under 72 characters
 - Describe *what* changed and *why*, not *how*
 - Examples:
-  - `Fix 404 on de-escalation article by adding missing rendered HTML`
-  - `Update publications: add comparative de-escalation review (2026-02-16)`
+  - `Update publications: sync from OpenAlex (2026-04-15)`
   - `Update CV to reflect new publications`
+  - `Fix about page bio text`
 
 ### Push Workflow
 
 ```bash
-# Stage specific files (never use git add -A blindly)
 git add <file1> <file2>
-
-# Commit with a clear message
-git commit -m "Short descriptive message explaining the change"
-
-# Push to the current branch
-git push -u origin <branch-name>
+git commit -m "Short descriptive message"
+git push
 ```
 
 ### Important Rules
@@ -82,4 +96,3 @@ git push -u origin <branch-name>
 - **Always push** after committing — local-only commits are not deployed
 - **Never force-push** to `main` without explicit confirmation
 - **Never skip hooks** (`--no-verify`) unless explicitly requested
-- The `docs/` directory is the deployed site — changes there go live when pushed to the branch tracked by GitHub Pages
