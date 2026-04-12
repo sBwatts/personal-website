@@ -178,6 +178,7 @@ keep_files:
 
 # Plug-ins
 plugins:
+  - jekyll-remote-theme
   - jekyll-archives
   - jekyll-email-protect
   - jekyll-feed
