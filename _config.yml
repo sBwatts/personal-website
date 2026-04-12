@@ -179,7 +179,9 @@ keep_files:
 # Plug-ins
 plugins:
   - jekyll-remote-theme
-  - jekyll-archives
+  - jekyll-3rd-party-libraries
+  - jekyll-archives-v2
+  - jekyll-cache-bust
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-get-json
@@ -188,9 +190,11 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-regex-replace
   - jekyll-scholar
-  - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-socials
+  - jekyll-tabs
   - jekyll-toc
+  - jekyll-twitter-plugin
   - jekyll/scholar
   - jemoji
 
