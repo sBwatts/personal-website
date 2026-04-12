@@ -178,7 +178,6 @@ keep_files:
 
 # Plug-ins
 plugins:
-  - jekyll-remote-theme
   - jekyll-3rd-party-libraries
   - jekyll-archives-v2
   - jekyll-cache-bust
@@ -506,8 +505,4 @@ third_party_libraries:
       js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
     version: "2.1.8"
 
-# -----------------------------------------------------------------------------
-# Remote theme
-# -----------------------------------------------------------------------------
-
-remote_theme: alshedivat/al-folio@v0.16.3
+# (Theme files are included directly in the repo — no remote_theme needed)

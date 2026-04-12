@@ -94,5 +94,11 @@
   },
   "research/articles/a-comparative-review-of-de-escalation-training-what-works-and-why/index.qmd": {
     "index.html": "7c57d9d8"
+  },
+  "projects/orp.qmd": {
+    "orp.html": "f71419fd"
+  },
+  "projects/truleo.qmd": {
+    "truleo.html": "b7b3f688"
   }
 }

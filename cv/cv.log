@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.1.28)  23 MAR 2026 07:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.30)  6 APR 2026 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -123,7 +123,7 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks23
 \inpenc@posthook=\toks24
 ) (/Users/wkg28/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtype.sty
-Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
+Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
 (/Users/wkg28/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
@@ -134,28 +134,28 @@ Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \MT@toks=\toks26
 \MT@tempbox=\box55
 \MT@count=\count296
-LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
-LaTeX Info: Redefining \leftprotrusion on input line 1088.
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
+LaTeX Info: Redefining \leftprotrusion on input line 1085.
 \MT@prot@toks=\toks27
-LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \rightprotrusion on input line 1104.
 LaTeX Info: Redefining \textls on input line 1449.
 \MT@outer@kern=\dimen158
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 \MT@listname@count=\count297
 (/Users/wkg28/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtype-pdftex.def
-File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
+File: microtype-pdftex.def 2026/03/01 v3.2d Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 944.
 LaTeX Info: Redefining \lslig on input line 944.
 \MT@outer@space=\skip54
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 (/Users/wkg28/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
+File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
 ) (/Users/wkg28/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
+Package: geometry 2026/03/07 v6.0 Page Geometry
 (/Users/wkg28/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
@@ -621,9 +621,7 @@ LaTeX Info: Redefining \microtypecontext on input line 127.
 Package microtype Info: Applying patch `item' on input line 127.
 Package microtype Info: Applying patch `toc' on input line 127.
 Package microtype Info: Applying patch `eqnum' on input line 127.
-
-Package microtype Warning: Unable to apply patch `footnote' on input line 127.
-
+Package microtype Info: Applying patch `footnote' on input line 127.
 Package microtype Info: Applying patch `verbatim' on input line 127.
 LaTeX Info: Redefining \microtypesetup on input line 127.
 Package microtype Info: Generating PDF output.
@@ -739,17 +737,17 @@ Package microtype Info: Character `029' is missing
 
 {/Users/wkg28/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/wkg28/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/Users/wkg28/Library/TinyTeX/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}] [2] [3]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 390.
+(Font)              scaled to size 9.37807pt on input line 395.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 390.
+(Font)              scaled to size 7.29405pt on input line 395.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 390.
+(Font)              scaled to size 5.21004pt on input line 395.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 390.
+(Font)              scaled to size 9.37807pt on input line 395.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 390.
+(Font)              scaled to size 7.29405pt on input line 395.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 390.
+(Font)              scaled to size 5.21004pt on input line 395.
 [4] [5] [6] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./cv.aux)
@@ -758,21 +756,21 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: 49930CF6BCF1C81B9C98EF631C465980;2928.
+(rerunfilecheck)             Checksum: 4670A02700222DE1E251BE69442C998F;2878.
  ) 
 Here is how much of TeX's memory you used:
- 26626 strings out of 469514
- 483726 string characters out of 5469114
- 905104 words of memory out of 5000000
- 54409 multiletter control sequences out of 15000+600000
- 697197 words of font info for 366 fonts, out of 8000000 for 9000
+ 26657 strings out of 469515
+ 484040 string characters out of 5469037
+ 905127 words of memory out of 5000000
+ 54411 multiletter control sequences out of 15000+600000
+ 698519 words of font info for 386 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 117i,12n,140p,1014b,558s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,12n,140p,1014b,562s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/wkg28/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/wkg28/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on cv.pdf (6 pages, 128363 bytes).
+Output written on cv.pdf (6 pages, 128412 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 205 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
  80045 words of extra memory for PDF output out of 89155 (max. 10000000)
 

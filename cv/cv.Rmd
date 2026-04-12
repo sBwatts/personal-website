@@ -78,21 +78,17 @@ Graduate Research Assistant | Arizona State University \hfill 2020-2024
 
 Watts, S., White, D, M., & Malm, A. Officer Perceptions of AI-Based Performance Evaluation: A Latent Class Analysis of Attitudinal Profiles Before and After Deployment.
 
-Watts, S., Orosco, C., & White, D. M. De-escalation Training: A Comparative Review of Tempe, ICAT, T3, and BSI. [pre-print](https://www.crimrxiv.com/pub/69g05cuu/release/1)
-
-Watts, S., White, D, M., & Malm, A. AI in Policing: Capturing Police Performance (Good and Bad) in Routine, Rare, and Novel Events. [pre-print](https://www.crimrxiv.com/pub/k4k0rpp1/release/1)
-
-White, M. D., Watts, S., & Malm, A. (2025). An Evaluation of Truleo’s AI-based Body-Worn Camera Analytics. (Preliminary findings: [pre-print](https://www.crimrxiv.com/pub/hy6q0g5t))
-
 # Publications
 
 [Google Scholar Profile](https://scholar.google.com/citations?user=_zgKKS0AAAAJ&hl=en&oi=ao): total citations = `r gs_cites`, h-index = `r gs_hindex`, i10-index = `r gs_i10`
 
 ## Peer-Reviewed Journal Articles
 
-1. **Watts, S.**, del Pozo, B., White, D. M., & Malm, A. (2025) Implementation Science Natural Experiment: Does Automated Feedback Impact Officers’ Perceptions? *Journal of Experimental Criminology*. [(DOI)](https://doi.org/10.1007/s11292-025-09711-7)
+1. White, M.D., **Watts, S**., & Malm, A. (*Forthcoming*). AI, Body-Worn Cameras, and a Potential Civilizing Effect for Officers: Evidence from the Arizona Truleo Study. *Criminology and Public Policy*.
 
-1. White, M. D., **Watts, S.**, Malm, A., & Navarrete, G. B. (2025). Officer Acceptance and Use of AI-Driven Body-Worn Camera Footage Review. *American Journal of Criminal Justice*. ([pre-print](https://doi.org/10.21428/cb6ab371.291631e5)) [(DOI)](https://doi.org/10.1007/s12103-025-09857-0)
+1. **Watts, S.**, del Pozo, B., White, M. D., & Malm, A. (2025) Implementation Science Natural Experiment: Does Automated Feedback Impact Officers’ Perceptions? *Journal of Experimental Criminology*. [(DOI)](https://doi.org/10.1007/s11292-025-09711-7)
+
+1. White, M. D., **Watts, S.**, Malm, A., & Navarrete, G. B. (2025). Officer Acceptance and Use of AI-Driven Body-Worn Camera Footage Review. *American Journal of Criminal Justice*. [(Pre-print)](https://doi.org/10.21428/cb6ab371.291631e5) [(DOI)](https://doi.org/10.1007/s12103-025-09857-0)
 
 1. White, M. D., Orosco, C., & **Watts, S**. (2025) Beyond Force and Injuries: Examining Alternative (and Important) Outcomes for Police De-escalation Training. *Journal of Criminal Justice*, 89, 102129. ([DOI](https://www-sciencedirect-com.ezproxy1.lib.asu.edu/science/article/pii/S0047235223001009?casa_token=OxErc72pD-QAAAAA:XATyRNg9im-Y4tSAmatE2RofJft49bpMx7c4_fOCiLyqIILE_rMDU03IA2yVHSmdepnLIrpzNfw))
 
@@ -100,23 +96,25 @@ White, M. D., Watts, S., & Malm, A. (2025). An Evaluation of Truleo’s AI-based
 
 1. **Watts, S**., White, M. D., Malm, A., & Perrone, D. (2024). Who is Fatigued? Examining Officer Attitudes Towards People Who Use Opioids, Naloxone, and Their Role in Responding to Opioid Overdoses. *Journal of Criminal Justice*, 95, 102308. [(DOI)](https://doi.org/10.1016/j.jcrimjus.2024.102308) 
 
-1. **Watts, S**., White, M. D., & Malm, A. (2024). Automating Body-Worn Camera Footage Review through AI: Preliminary Findings from a Multi-Site Randomized Control Trial. *Policing: A Journal of Policy and Practice*, 18, paae107. [(pre-print)](https://www.crimrxiv.com/pub/8xm0r2jv/release/1) [(DOI)](https://doi.org/10.1093/police/paae107)
+1. **Watts, S**., White, M. D., & Malm, A. (2024). Automating Body-Worn Camera Footage Review through AI: Preliminary Findings from a Multi-Site Randomized Control Trial. *Policing: A Journal of Policy and Practice*, 18, paae107. [(Pre-print)](https://www.crimrxiv.com/pub/8xm0r2jv/release/1) [(DOI)](https://doi.org/10.1093/police/paae107)
 
 1. White, M. D., Monk, K., & **Watts, S**. (2023). A Half-Century Investigation of Police Officer Line-of-Duty Deaths: Putting Recent Trends in Long-Term Context. *Police Practice and Research*, 1-18. ([DOI](https://www-tandfonline-com.ezproxy1.lib.asu.edu/doi/abs/10.1080/15614263.2023.2267728))
 
-1. White, D. M., Orosco, C., & **Watts, S**. (2023). Can De-escalation Training Reduce Use of Force and Citizen Injury Without Compromising Officer Safety? *Journal of Experimental Criminology*, 1-26. ([DOI](https://link-springer-com.ezproxy1.lib.asu.edu/article/10.1007/s11292-023-09584-8))
+1. White, M. D., Orosco, C., & **Watts, S**. (2023). Can De-escalation Training Reduce Use of Force and Citizen Injury Without Compromising Officer Safety? *Journal of Experimental Criminology*, 1-26. ([DOI](https://link-springer-com.ezproxy1.lib.asu.edu/article/10.1007/s11292-023-09584-8))
 
 1. White, M. D., **Watts, S**., Orosco, C., Malm, A., & Perrone, D. (2022). Leveraging Body-Worn Camera Footage to Better Understand Opioid Overdoses and the Impact of Police-Led Naloxone Programs. *American Journal of Public Health*, *112*(9), 1326-1332. ([DOI](https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2022.306918))
 
-1. Gaub, J., White, M., Malm, A., **Watts, S**., & Brown, K. (2022). Investigation the Role and Utility of Body-Worn Cameras at the “George Floyd” Protests. *Policing: An International Journal*, *45*(4), 633-647. ([DOI](https://www.emerald.com/insight/content/doi/10.1108/PIJPSM-10-2021-0151/full/html))
+1. Gaub, J., White, M. D., Malm, A., **Watts, S**., & Brown, K. (2022). Investigation the Role and Utility of Body-Worn Cameras at the “George Floyd” Protests. *Policing: An International Journal*, *45*(4), 633-647. ([DOI](https://www.emerald.com/insight/content/doi/10.1108/PIJPSM-10-2021-0151/full/html))
 
 1. White, M. D., Perrone, D., & **Watts, S**., & Malm, A. (2021). Moving Beyond Narcan: A Police, Social Service, and Researcher Collaborative Response to the Opioid Crisis. *American Journal of Criminal Justice*, *46*(4), 626-643. ([DOI](https://link-springer-com.ezproxy1.lib.asu.edu/article/10.1007/s12103-021-09625-w))
 
 1. White, M. D., Malm, A., Perrone, D., & **Watts, S**. (2021). Narcan Cops: Officer Perceptions of Opioid Use and Willingness to Carry Naloxone. *Journal of Criminal Justice*, 72, 101778. ([DOI](https://www-sciencedirect-com.ezproxy1.lib.asu.edu/science/article/pii/S0047235220302725?casa_token=M3KzLm4DIoUAAAAA:KhQQ6E6WpFcNQdyfTN33-SRHRPttqc81ijlWaNX0wOOYu3TiHBIa17DzDZS2_7K_vU9_CQwdAaA))
 
-## Study Pre-registrations
+## Book Chapters
 
-Seth Watts, Michael D. White, & Aili Malm. "A Process and Outcome Evaluation of Automated Body-Worn Camera Review Technology in 3 Arizona Police Departments." [Registered at OSF. Embargoed (pending results).](https://osf.io/vdycb/)
+1. Watts, S., Orosco, C., & White, M. D. (*Forthcoming 2026*). De-escalation Training: A Comparative Review of Tempe, ICAT, T3, and BSI. In Alpert, G., Adams, I. T., and Mclean, D. K. (Eds.), *Critical Issues in Policing*. [(Pre-print)](https://www.crimrxiv.com/pub/69g05cuu/release/1)
+
+1. Watts, S., White, M. D., & Malm, A. (*Forthcoming 2026*). AI in Policing: Capturing Police Performance (Good and Bad) in Routine, Rare, and Novel Events. In Huey, L., Ferguson, L. and Adams, I.T. (Eds.), *Future Policing: Technology and Transformation*. Taylor & Francis/Routledge. [(Pre-print)](https://www.crimrxiv.com/pub/k4k0rpp1/release/1)
 
 ## Research Briefs & Technical Reports
 
