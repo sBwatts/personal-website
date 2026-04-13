@@ -7,18 +7,14 @@ redirect_from:
   - /about.html
 ---
 
-I examine how emerging tools — from AI-assisted body-worn cameras to co-response models — reshape police behavior, officer decision-making, and community outcomes. My work sits at the intersection of criminology, public health, and applied policy evaluation.
+I am an assistant professor of Criminal Justice and Criminology. My research focuses on how emerging tools — from AI-assisted body-worn cameras to co-response models — reshape police behavior, officer decision-making, and community outcomes. My work sits at the intersection of criminology, public health, and applied policy evaluation.
 
 ---
 
-**Assistant Professor**, School of Criminal Justice and Criminology, Texas State University &middot; 2025 – present
+## Recent Publications
 
-**Research Affiliate**, Texas Crime &amp; Justice Center, Texas State University &middot; 2025 – present
+{% bibliography --max 3 %}
+
+[See all publications](/publications/){: .btn}
 
 ---
-
-**PhD**, Criminology &amp; Criminal Justice, Arizona State University, 2024
-
-**MS**, Criminology &amp; Criminal Justice, Arizona State University, 2021
-
-**BA**, Psychology, Bowling Green State University, 2019
