@@ -1,1 +1,8 @@
 /.quarto/
+/_site/
+/.claude/
+/Gemfile.lock
+*.DS_Store
+.Rproj.user/
+.Rhistory
+vendor/
