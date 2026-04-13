@@ -1,15 +1,8 @@
 ---
-layout: page
+layout: single
+title: "Publications"
 permalink: /publications/
-title: publications
-description: Compiled automatically from <a href="https://openalex.org/" target="_blank">OpenAlex</a>.
-nav: true
-nav_order: 2
+author_profile: true
 ---
 
-<!-- _pages/publications.md -->
-<div class="publications">
-
 {% bibliography %}
-
-</div>

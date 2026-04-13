@@ -1,9 +1,8 @@
 ---
-layout: page
+layout: single
+title: "CV"
 permalink: /cv/
-title: cv
-nav: true
-nav_order: 3
-cv_pdf: cv.pdf
-description:
+author_profile: true
 ---
+
+You can download my full CV as a PDF: [Download CV](/assets/pdf/cv.pdf)

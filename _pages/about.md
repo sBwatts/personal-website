@@ -1,20 +1,10 @@
 ---
-layout: about
-title: about
 permalink: /
-subtitle: <a href='https://www.cjc.txst.edu/'>School of Criminal Justice and Criminology</a> &middot; Texas State University
-
-profile:
-  align: right
-  image: headshot.jpeg
-  image_circular: false
-  more_info: >
-    <p>School of Criminal Justice &amp; Criminology</p>
-    <p>Texas State University</p>
-
-news: false
-selected_papers: true
-social: true
+title: "About"
+author_profile: true
+redirect_from:
+  - /about/
+  - /about.html
 ---
 
 I examine how emerging tools — from AI-assisted body-worn cameras to co-response models — reshape police behavior, officer decision-making, and community outcomes. My work sits at the intersection of criminology, public health, and applied policy evaluation.
