@@ -2,7 +2,7 @@
 title: "A Comparative Review of De-escalation Training: What Works and Why"
 authors: "Seth Watts, Carlena Orosco, Michael D. White"
 date: '2026-02-16'
-pub-journal: "CrimRxiv"
+journal: "CrimRxiv"
 doi: 10.21428/cb6ab371.d88be0db
 citation-url: https://doi.org/10.21428/cb6ab371.d88be0db
 format:

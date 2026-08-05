@@ -2,7 +2,7 @@
 title: "Does automated feedback impact the acceptability of AI-generated police body worn camera review? An implementation science natural experiment"
 authors: "Seth Watts, Brandon del Pozo, Michael D. White et al."
 date: '2025-11-24'
-pub-journal: "Journal of Experimental Criminology"
+journal: "Journal of Experimental Criminology"
 doi: 10.1007/s11292-025-09711-7
 citation-url: https://doi.org/10.1007/s11292-025-09711-7
 format:

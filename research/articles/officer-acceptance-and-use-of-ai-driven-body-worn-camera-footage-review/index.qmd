@@ -2,7 +2,7 @@
 title: "Officer Acceptance and Use of AI-Driven Body-Worn Camera Footage Review"
 authors: "Michael D. White, Seth Watts, Aili Malm et al."
 date: '2025-09-22'
-pub-journal: "American Journal of Criminal Justice"
+journal: "American Journal of Criminal Justice"
 doi: 10.1007/s12103-025-09857-0
 citation-url: https://doi.org/10.1007/s12103-025-09857-0
 format:
@@ -14,7 +14,7 @@ format:
 
 **Published in:** American Journal of Criminal Justice
 
-**Citations:** 1
+**Citations:** 4
 
 ## Links
 
