@@ -18,13 +18,12 @@ listing:
       - "title asc"
 ---
 
-::: {.grid .hero-grid}
-
+:::::: {.grid .hero-grid}
 ::: {.g-col-12 .g-col-sm-4 .hero-photo-col}
-![Seth Watts](headshot.jpeg){.hero-headshot}
+![](headshot.jpeg){.hero-headshot}
 :::
 
-::: {.g-col-12 .g-col-sm-8 .hero-bio-col}
+:::: {.g-col-12 .g-col-sm-8 .hero-bio-col}
 ```{=html}
 <p class="hero-affiliation">Assistant Professor &middot; Texas State University</p>
 <h1 class="hero-name">Seth Watts</h1>
@@ -48,9 +47,8 @@ listing:
   </a>
 </div>
 ```
-:::
-
-:::
+::::
+::::::
 
 <hr class="section-divider">
 
