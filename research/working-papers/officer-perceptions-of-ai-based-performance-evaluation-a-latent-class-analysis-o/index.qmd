@@ -2,7 +2,7 @@
 title: "Officer Perceptions of AI-Based Performance Evaluation: A Latent Class Analysis of Attitudinal Profiles Before and After Deployment"
 authors: "Seth Watts, Michael D. White, Aili Malm"
 date: '2026-07-17'
-journal: "CrimRxiv"
+pub-journal: "CrimRxiv"
 doi: 10.21428/cb6ab371.67a771e2
 citation-url: https://doi.org/10.21428/cb6ab371.67a771e2
 format:

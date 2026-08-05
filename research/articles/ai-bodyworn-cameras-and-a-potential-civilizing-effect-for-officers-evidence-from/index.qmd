@@ -2,7 +2,7 @@
 title: "AI, body‐worn cameras, and a potential civilizing effect for officers: Evidence from the Arizona Truleo study"
 authors: "Michael D. White, Seth Watts, Aili Malm"
 date: '2026-04-24'
-journal: "Criminology & Public Policy"
+pub-journal: "Criminology & Public Policy"
 doi: 10.1111/1745-9133.70018
 citation-url: https://doi.org/10.1111/1745-9133.70018
 format:

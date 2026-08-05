@@ -367,7 +367,7 @@ class OpenAlexArticleSync:
             f'title: {title_yaml}',
             f'authors: "{author}"',
             f"date: '{date}'",
-            f'journal: "{venue}"',
+            f'pub-journal: "{venue}"',
         ]
         if doi:
             lines += [f'doi: {doi}', f'citation-url: {doi_url}']
