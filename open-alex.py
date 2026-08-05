@@ -317,12 +317,143 @@ class OpenAlexArticleSync:
 
         print(f"Wrote {len(articles)} entries to {output_path}")
 
+    def _is_preprint(self, article):
+        """Return True if the work is a preprint / working paper (e.g. CrimRxiv)."""
+        work_type = article.get('work_type', '').lower()
+        venue = article.get('publication_venue', '').lower()
+        return (
+            work_type in ('posted-content', 'preprint') or
+            'crimrxiv' in venue or
+            'arxiv' in venue or
+            'preprint' in venue
+        )
+
+    def _make_slug(self, title, max_len=80):
+        """Generate a URL-safe directory slug from a title (matches existing convention)."""
+        slug = title.lower()
+        slug = re.sub(r'[^\w\s-]', '', slug)   # drop punctuation except hyphens
+        slug = re.sub(r'\s+', '-', slug)         # spaces → hyphens
+        slug = re.sub(r'-+', '-', slug)          # collapse runs
+        return slug[:max_len]
+
+    def _make_article_qmd(self, article, is_preprint):
+        """Return the text content for an article's index.qmd file."""
+        title     = article.get('title', 'Untitled')
+        author    = article.get('author', '')
+        date      = article.get('date', '')
+        venue     = article.get('publication_venue', '')
+        doi       = article.get('doi', '')
+        doi_url   = article.get('doi_url', '') or (f"https://doi.org/{doi}" if doi else '')
+        pdf_url   = article.get('pdf_url', '')
+        citations = article.get('cited_by_count', 0)
+        is_oa     = article.get('open_access', False)
+        openalex_id = article.get('openalex_id', '')
+
+        openalex_url = ''
+        if openalex_id:
+            oa_key = openalex_id.split('/')[-1]
+            openalex_url = f"https://openalex.org/{oa_key}"
+
+        # Quote title safely for YAML
+        if '"' in title and "'" in title:
+            title_yaml = "'" + title.replace("'", "''") + "'"
+        elif '"' in title:
+            title_yaml = f"'{title}'"
+        else:
+            title_yaml = f'"{title}"'
+
+        lines = [
+            '---',
+            f'title: {title_yaml}',
+            f'authors: "{author}"',
+            f"date: '{date}'",
+            f'journal: "{venue}"',
+        ]
+        if doi:
+            lines += [f'doi: {doi}', f'citation-url: {doi_url}']
+        lines += ['format:', '  html:', '    toc: true', '---', '']
+
+        if is_preprint:
+            lines += [
+                '::: {.callout-warning}',
+                '## Preprint',
+                'This is a preprint and has not undergone peer review. Interpret findings with caution.',
+                ':::',
+                '',
+            ]
+
+        lines += [
+            '## Publication Details',
+            '',
+            f'**Published in:** {venue}',
+            '',
+            f'**Citations:** {citations}',
+        ]
+
+        if is_oa:
+            lines += ['', '**Open Access:** Yes']
+
+        link_parts = []
+        if doi_url:
+            link_parts.append(f'[DOI Link]({doi_url})')
+        if pdf_url:
+            link_parts.append(f'[PDF]({pdf_url})')
+        if openalex_url:
+            link_parts.append(f'[OpenAlex]({openalex_url})')
+
+        if link_parts:
+            lines += ['', '## Links', '', ' | '.join(link_parts)]
+
+        lines.append('')
+        return '\n'.join(lines)
+
+    def save_article_pages(self, articles):
+        """Write individual index.qmd files for every article.
+
+        Journal articles → research/articles/<slug>/index.qmd
+        Preprints/CrimRxiv → research/working-papers/<slug>/index.qmd
+
+        Stale pages (no longer returned by OpenAlex) are removed.
+        """
+        articles_dir       = Path('research/articles')
+        working_papers_dir = Path('research/working-papers')
+        articles_dir.mkdir(parents=True, exist_ok=True)
+        working_papers_dir.mkdir(parents=True, exist_ok=True)
+
+        generated = set()
+
+        for article in articles:
+            is_wp   = self._is_preprint(article)
+            target  = working_papers_dir if is_wp else articles_dir
+            slug    = self._make_slug(article.get('title', 'untitled'))
+            out_dir = target / slug
+            out_dir.mkdir(parents=True, exist_ok=True)
+            qmd     = out_dir / 'index.qmd'
+            qmd.write_text(self._make_article_qmd(article, is_wp), encoding='utf-8')
+            generated.add(qmd)
+            label = '[WP] ' if is_wp else '[PUB]'
+            print(f"  {label} {article.get('title', '')[:60]}")
+
+        # Remove pages that are no longer in OpenAlex results
+        for search_dir in [articles_dir, working_papers_dir]:
+            for old_qmd in search_dir.glob('*/index.qmd'):
+                if old_qmd not in generated:
+                    print(f"  Removing stale page: {old_qmd}")
+                    old_qmd.unlink()
+                    try:
+                        old_qmd.parent.rmdir()
+                    except OSError:
+                        pass
+
+        print(f"Saved {len(generated)} article pages.")
+
     def sync_author_works(self, author_name=None, orcid=None, limit=50):
-        """Sync all works: fetch from OpenAlex, write BibTeX and CSV"""
+        """Sync all works: fetch from OpenAlex, write BibTeX, CSV, and article pages."""
         articles = self.fetch_author_works(author_name=author_name, orcid=orcid, limit=limit)
 
         self.sync_bibtex(articles)
         self.sync_csv(articles)
+        self.save_article_pages(articles)
 
         print(f"\nSync complete: {len(articles)} publications processed.")
         return articles

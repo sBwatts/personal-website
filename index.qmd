@@ -1,0 +1,64 @@
+---
+title: ""
+pagetitle: "Seth Watts, PhD"
+
+listing:
+  - id: articles
+    contents:
+      - research/articles
+    exclude:
+      title: ""
+    type: table
+    max-items: 3
+    page-size: 3
+    fields: [date, title, subtitle, author]
+    max-description-length: 75
+    sort:
+      - "date desc"
+      - "title asc"
+---
+
+::: {.grid .hero-grid}
+
+::: {.g-col-12 .g-col-sm-4 .hero-photo-col}
+![Seth Watts](headshot.jpeg){.hero-headshot}
+:::
+
+::: {.g-col-12 .g-col-sm-8 .hero-bio-col}
+```{=html}
+<p class="hero-affiliation">Assistant Professor &middot; Texas State University</p>
+<h1 class="hero-name">Seth Watts</h1>
+<p class="hero-bio">I examine how emerging tools — from AI-assisted body-worn cameras to co-response models — reshape police behavior, officer decision-making, and community outcomes. My work sits at the intersection of criminology, public health, and applied policy evaluation.</p>
+```
+
+::: research-chips
+[Policing]{.chip} [Technology & AI]{.chip} [Body-Worn Cameras]{.chip} [De-escalation]{.chip} [Public Health]{.chip} [Program Evaluation]{.chip}
+:::
+
+```{=html}
+<div class="hero-cta">
+  <a href="research.html" class="btn-primary-custom">
+    <i class="bi bi-journal-text"></i> Publications
+  </a>
+  <a href="cv/cv.pdf" class="btn-outline-custom" target="_blank">
+    <i class="bi bi-file-earmark-person"></i> Download CV
+  </a>
+  <a href="mailto:sbwatts@txstate.edu" class="btn-outline-custom">
+    <i class="bi bi-envelope"></i> Contact
+  </a>
+</div>
+```
+:::
+
+:::
+
+<hr class="section-divider">
+
+::: section-heading-row
+## Recent Work {.section-heading}
+
+[All publications →](research.qmd){.section-link}
+:::
+
+::: {#articles}
+:::

@@ -4,7 +4,9 @@
       "research/articles"
     ],
     "research.qmd": [
-      "articles/*/index.qmd"
+      "articles/*/index.qmd",
+      "research/articles/*/index.qmd",
+      "research/working-papers/*/index.qmd"
     ]
   }
 }

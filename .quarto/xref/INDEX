@@ -1,6 +1,7 @@
 {
   "index.qmd": {
-    "index.html": "2ac297ed"
+    "index.html": "2ac297ed",
+    "index.haddock": "33794e7b"
   },
   "about.qmd": {
     "about.html": "846b8af8"
@@ -100,5 +101,20 @@
   },
   "projects/truleo.qmd": {
     "truleo.html": "b7b3f688"
+  },
+  "research/working-papers/a-comparative-review-of-de-escalation-training-what-works-and-why/index.qmd": {
+    "index.html": "be05b3f0"
+  },
+  "research/working-papers/ai-in-policing-capturing-police-performance-good-and-bad-in-routine-rare-and-nov/index.qmd": {
+    "index.html": "3ca7d4cf"
+  },
+  "research/working-papers/an-evaluation-of-truleos-ai-based-body-worn-camera-analytics/index.qmd": {
+    "index.html": "2762dcfd"
+  },
+  "research/working-papers/automating-body-worn-camera-footage-review-through-ai-preliminary-findings-from-/index.qmd": {
+    "index.html": "35a397da"
+  },
+  "research/articles/ai-bodyworn-cameras-and-a-potential-civilizing-effect-for-officers-evidence-from/index.qmd": {
+    "index.html": "de80b3d1"
   }
 }
