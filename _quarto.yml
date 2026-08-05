@@ -4,6 +4,7 @@ project:
     - "*.qmd"
     - "!cv/**"
     - "!projects/**"
+    - "!about.qmd"
   # pre-render scripts: run locally as needed, not in CI
   # pre-render:
   #   - Rscript cv/cv_render.R
@@ -26,8 +27,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
+      # - href: about.qmd
+      #   text: About
       - href: research.qmd
         text: Publications
 
