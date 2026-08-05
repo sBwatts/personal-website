@@ -2,37 +2,41 @@
 
 Personal academic website for Seth Watts, PhD — Assistant Professor, School of Criminal Justice and Criminology, Texas State University.
 
-Built with [Jekyll](https://jekyllrb.com/) and the [academicpages](https://github.com/academicpages/academicpages.github.io) theme (based on [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)), deployed via [GitHub Pages](https://pages.github.com/).
+Built with [Quarto](https://quarto.org/), deployed via [GitHub Actions](https://github.com/features/actions) to GitHub Pages.
 
 **Live site:** [https://www.sethbwatts.com](https://www.sethbwatts.com)
 
 ## Project Structure
 
 ```
-├── _bibliography/
-│   └── papers.bib             # BibTeX publication list (auto-updated by open-alex.py)
-├── _pages/
-│   ├── about.md               # Home / about page (includes 3 recent publications)
-│   ├── publications.md        # Full publications listing (rendered from papers.bib)
-│   ├── cv.md                  # CV page (links to assets/pdf/cv.pdf)
-│   └── research.md            # Research projects
-├── _data/
-│   └── navigation.yml         # Site navigation links
-├── assets/
-│   ├── img/headshot.jpeg      # Profile photo
-│   └── pdf/cv.pdf             # CV PDF
-├── images/
-│   └── headshot.jpeg          # Profile photo (used by sidebar author widget)
+├── index.qmd                  # Home page (hero + recent publications)
+├── about.qmd                  # Bio, education, positions
+├── research.qmd               # Publications listing
+├── projects/
+│   ├── truleo.qmd             # Truleo RCT project page
+│   └── orp.qmd                # Tempe Opioid Recovery Project page
+├── teaching/
+│   └── cj-4310/               # CJ 4310 course page
+├── research/
+│   ├── articles/              # Individual published article pages (auto-generated)
+│   └── working-papers/        # Working paper pages
 ├── cv/
 │   ├── cv.Rmd                 # CV source (R Markdown)
-│   └── cv_render.R            # CV rendering script
+│   ├── cv_render.R            # CV rendering script
+│   └── cv.pdf                 # Built CV (committed)
 ├── data/
-│   └── publications.csv       # Publications data cache
-├── open-alex.py               # Fetches publications from OpenAlex API -> papers.bib + CSV
-├── _config.yml                # Jekyll / academicpages site configuration
-├── Gemfile                    # Ruby gem dependencies
+│   ├── publications.csv       # Publications data from OpenAlex
+│   └── scholar_stats.yml      # Google Scholar citation stats
+├── _bibliography/
+│   └── papers.bib             # BibTeX publication list (auto-updated by open-alex.py)
+├── styles.css                 # Custom CSS (design tokens, dark mode, components)
+├── _quarto.yml                # Quarto config: navbar, theme, output dir
+├── open-alex.py               # Fetches publications from OpenAlex API
+├── save_pubs.R                # Generates individual article pages from publications.csv
+├── headshot.jpeg              # Profile photo
+├── CNAME                      # Custom domain for GitHub Pages
 └── .github/workflows/
-    ├── deploy.yml             # Builds and deploys site on push to main
+    ├── deploy.yml             # Renders and deploys site on push to main
     └── update-publications.yml # Auto-syncs publications on the 1st and 15th
 ```
 
@@ -40,43 +44,33 @@ Built with [Jekyll](https://jekyllrb.com/) and the [academicpages](https://githu
 
 ### Prerequisites
 
-- [Ruby](https://www.ruby-lang.org/) 3.2+ and [Bundler](https://bundler.io/) (install via `brew install ruby`)
+- [Quarto](https://quarto.org/docs/get-started/) 1.4+
+- [R](https://www.r-project.org/) with `yaml` package
 - [Python 3](https://www.python.org/) with packages: `requests`, `pyyaml`
-
-### Install dependencies
-
-```bash
-bundle install
-```
 
 ### Preview locally
 
 ```bash
-bundle exec jekyll serve
+quarto preview
 ```
 
-The site will be available at `http://localhost:4000`.
-
-> **Note:** If your system Ruby is older than 3.2, use the Homebrew Ruby explicitly:
-> ```bash
-> /opt/homebrew/opt/ruby/bin/bundle exec jekyll serve
-> ```
+The site will be available at `http://localhost:4848` with live reload.
 
 ### Full build
 
 ```bash
-bundle exec jekyll build
+quarto render
 ```
 
-Output goes to `_site/` (not committed).
+Output goes to `docs/` (committed and served by GitHub Pages).
 
 ## Publication Pipeline
 
 Publications are managed through two layers:
 
-1. **Static BibTeX** (`_bibliography/papers.bib`): The source of truth for the publications page. jekyll-scholar renders this automatically on every build. The three most recent entries also appear on the home page.
+1. **Auto-sync** (`open-alex.py`): Fetches the latest publications from the [OpenAlex API](https://openalex.org/) using ORCID `0000-0002-5108-9055`, then writes `data/publications.csv` and `_bibliography/papers.bib`, and generates/removes individual article pages under `research/articles/` and `research/working-papers/`.
 
-2. **Auto-sync** (`open-alex.py`): Fetches the latest publications from the [OpenAlex API](https://openalex.org/) using ORCID `0000-0002-5108-9055`, then writes/overwrites `_bibliography/papers.bib` and `data/publications.csv`.
+2. **Manual pages**: Publication pages not returned by OpenAlex (e.g., works not claimed under your ORCID) are tracked in git and preserved. To add OpenAlex coverage for missing works, claim them at [openalex.org](https://openalex.org/).
 
 To manually sync publications locally:
 
@@ -84,33 +78,24 @@ To manually sync publications locally:
 python open-alex.py
 ```
 
-The GitHub Actions workflow (`.github/workflows/update-publications.yml`) runs this automatically on the 1st and 15th of each month, then commits and pushes any changes.
+The GitHub Actions workflow (`.github/workflows/update-publications.yml`) runs this automatically on the 1st and 15th of each month, then commits and pushes any changes to `data/`.
 
 ## CV Updates
 
 The CV is a PDF generated from `cv/cv.Rmd` using R and TinyTeX. To update:
 
 1. Edit `cv/cv.Rmd`
-2. Run `Rscript cv/cv_render.R` to produce a new `cv/cv.pdf`
-3. Copy the updated PDF to `assets/pdf/cv.pdf`
-4. Commit and push both files
+2. Run `Rscript cv/cv_render.R` to produce `cv/cv.pdf`
+3. Commit and push `cv/cv.pdf`
 
 ## Deployment
 
-The site is deployed via GitHub Actions using the `deploy.yml` workflow:
+The site deploys automatically via GitHub Actions:
 
-- On every push to `main`, the workflow builds the Jekyll site and deploys it to GitHub Pages.
-- No manual build step is needed — push to `main` and the site updates automatically.
+- **`deploy.yml`** — Installs Quarto + R, runs `quarto render`, and deploys `docs/` to GitHub Pages on every push to `main`.
+- No manual build step needed — push to `main` and the site updates.
 
 ### GitHub Pages settings required
 
-In the repository Settings > Pages:
+In repository Settings > Pages:
 - **Source**: GitHub Actions
-
-## Theme
-
-The site uses [academicpages](https://github.com/academicpages/academicpages.github.io), a Jekyll theme built on Minimal Mistakes. Theme files are included directly in the repository. Key configuration:
-
-- `_config.yml` — Site settings, author info, social links, jekyll-scholar configuration
-- `_data/navigation.yml` — Top navigation links
-- `_sass/layout/_page.scss` — Custom `min-height` fix to prevent footer from overlapping the sidebar on short pages
